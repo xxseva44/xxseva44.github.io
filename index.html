@@ -1,1 +1,138 @@
-Welcome
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geel Sevathean</title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<style>
+	body {
+		font-family: Courier New;
+		background-color: #FFFFFF;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	h1 {
+		font-family: Oswald;
+		text-align: center;
+		color: #000000;
+		padding: 14px 16px;
+		font-size: 35px;
+		margin: 0;
+	}
+	h2 {
+		text-align: left;
+		padding: 14px 16px;
+		background-color: #000000;
+		color: #FFFFFF;
+		font-size: 25px;
+		margin: 0;
+	}
+	footer {
+		text-align: center;
+		padding: 50px;
+		background-color: #DB859B;
+		color: #FFFFFF;
+		line-height: 0.5;
+	}
+	a {
+		color: #000000;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: auto;
+		overflow: hidden;
+		display: flex;
+		background-color: #000000;
+		font-size: 18px;
+		font-family: DotGothic16;
+	}
+	li {
+		display: flex;
+	}
+	li a {
+		display: block;
+		padding: 14px 16px;
+		background-color: #000000;
+		color: #FFFFFF;
+	}
+	li a:hover{
+		background-color: #DB859B;
+		color: #000000;
+	}
+	.highlight{
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+	}
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+	.highlightImages_1, .highlightImages_2, .highlightImages_3, .highlightImages_4{
+		position: relative;
+		text-align: center;
+  	}
+	.bottom-left {
+  		left: 16px;
+	}
+	.bottom-right {
+  		right: 16px;
+	}
+	.bottom-right, .bottom-left{
+		position: absolute;
+  		bottom: 8px;
+		color: #FFFFFF;
+		font-size: 30px;
+		margin: 0;
+	}
+</style>
+
+<body>
+<h1>GEEL SEVATHEAN</h1>
+	<div class="navigationBar">
+		<ul>
+			<li><a href = "index.html">Home</a></li>
+			<li><a href = "Photography.html">Photography</a></li>
+			<li><a href = "Electronics.html">Electronics</a></li>
+			<li><a href = "Android_Development.html">Android Development</a></li>
+			<li><a href = "About_Me.html">About Me</a></li>
+		</ul>
+	</div>
+	<div class="highlight">
+		<h2>Highlights</h2>
+		<div class="highlightImages_1">
+			<img src="images/homepage/image1.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+				<div class="bottom-left" data-aos="fade-in" data-aos-duration="1500">Crusin' on King in Kitchener Ontario. July 13th, 2024.</div>
+		</div>
+		<div class="highlightImages_2">
+			<img src="images/homepage/image2.jpg" alt="Montreal Olympic Park" data-aos="fade-in" data-aos-duration="1500">
+				<div class="bottom-right" data-aos="fade-in" data-aos-duration="1500">Montreal Olympic Park. July 28th, 2024.</div>
+		</div>
+		<div class="highlightImages_3">
+			<img src="images/homepage/image3.jpg" alt="Church whose name i've forgotten" data-aos="fade-in" data-aos-duration="1500">
+				<div class="bottom-left" data-aos="fade-in" data-aos-duration="1500">FILLER XYZ.</div>
+		</div>
+		<div class="highlightImages_4">
+			<img src="images/homepage/image4.jpg" alt="Old Port, Montreal" data-aos="fade-in" data-aos-duration="1500">
+				<div class="bottom-right" data-aos="fade-in" data-aos-duration="1500">Old Port in Montreal, Quebec. July 28th, 2024.</div>
+		</div>
+	</div>
+ 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+<footer>
+	<p>Contact me.</p>
+	<p><a href="mailto:TBD">TBD</a></p>
+</footer>
+</html>
