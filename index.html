@@ -5,8 +5,9 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Bootstrap-->
 </head>
 <style>
 	body {
@@ -41,39 +42,30 @@
 		color: #FFFFFF;
 		line-height: 0.5;
 	}
-	a {
-		color: #000000;
-	}
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		width: auto;
-		overflow: hidden;
-		display: flex;
-		background-color: #000000;
-		font-size: 18px;
-		font-family: DotGothic16;
-	}
-	li {
-		display: flex;
-	}
-	li a {
-		display: block;
-		padding: 14px 16px;
+	.navbar-custom {
 		background-color: #000000;
 		color: #FFFFFF;
 	}
-	li a:hover{
-		background-color: #DB859B;
-		color: #000000;
+	.custom-toggler.navbar-toggler {
+		border-color:#FFFFFF
 	}
-	.highlight{
+	.custom-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(219,133,155, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	}
+	.nav-item {
+		font-size: 20px;
+		font-family: DotGothic16;
+		color: #FFFFFF;
+	}
+	.nav-item:hover {
+		color: #DB859B;
+	}
+	.highlight {
 		margin: 0;
 		padding: 0;
 		font-size: 0;
 	}
-	img{
+	img {
 		max-width: 100%;
 		height: auto;
 	}
@@ -98,15 +90,20 @@
 
 <body>
 <h1>GEEL SEVATHEAN</h1>
-	<div class="navigationBar">
-		<ul>
-			<li><a href = "index.html">Home</a></li>
-			<li><a href = "Photography.html">Photography</a></li>
-			<li><a href = "Electronics.html">Electronics</a></li>
-			<li><a href = "Android_Development.html">Android Development</a></li>
-			<li><a href = "About_Me.html">About Me</a></li>
-		</ul>
-	</div>
+	<nav class="navbar navbar-expand-lg navbar-custom">
+		<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="index.html">Home</a>
+				<a class="nav-item nav-link" href="Photography.html">Photography</a>
+				<a class="nav-item nav-link" href="Electronics.html">Electronics</a>
+				<a class="nav-item nav-link" href="Android_Development.html">Android Development</a>
+				<a class="nav-item nav-link" href="About_Me.html">About Me</a>
+			</div>
+		</div>
+	</nav>
 	<div class="highlight">
 		<h2>Highlights</h2>
 		<div class="highlightImages_1">
@@ -126,7 +123,9 @@
 				<div class="bottom-right" data-aos="fade-in" data-aos-duration="1500">Old Port in Montreal, Quebec. July 28th, 2024.</div>
 		</div>
 	</div>
- 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--AOS-->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!--Bootstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> <!--Bootstrap-->
 	<script>
 		AOS.init();
 	</script>
