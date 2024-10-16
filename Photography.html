@@ -19,6 +19,15 @@
 		padding: 0;
 		box-sizing: border-box;
 	}
+	.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:visited{
+		color: #FFFFFF;
+		border-radius: 0%;
+		border-color: rgba(0,0,0,0);
+	}
+	.btn-outline-primary:hover{
+		border-color: rgba(0,0,0,0);
+		background-color: rgba(0,0,0,0);
+	}
 	h1 {
 		font-family: Oswald;
 		text-align: center;
@@ -86,7 +95,6 @@
 	}
 	.blurbPhotoGrid-container{
 		position: relative;
-	
 	}
 	.photoGrid{
 		display: flex;
@@ -128,10 +136,17 @@
 </nav>
 <div class="blurbPhotoGrid-container">
 	<div class="blurb">
-		<h2>Say Hello to My Little Friend. 
-		<br>(Aka my Cannon T6)</h2>
-		<p>	Beginning in middle school, I found my humble start waving around an old phone, attempting to capture the world in a lense similar to my own. After having obtained my current Cannon T6 in 2017; it marked the growth of a significant skillset of mine. As the years went by, I futher developed my creative eye and post processing of images which resulted in the artistry seen below. <br> <br> <br></p>
-	</div>
+    <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#blurb" aria-expanded="false" aria-controls="blurb">
+        Show/Hide
+    </button>
+    <div class="collapse show" id="blurb">
+        <h2>Say Hello to My Little Friend. 
+        <br>(Aka my Canon T6)</h2>
+        <p>
+            Beginning in middle school, I found my humble start waving around an old phone, attempting to capture the world in a lens similar to my own. After having obtained my current Canon T6 in 2017, it marked the growth of a significant skillset of mine. As the years went by, I further developed my creative eye and post-processing of images, which resulted in the artistry seen below.
+        </p>
+    </div>
+</div>
 	<div class="photoGrid">
 		<img src="images/photography/image1.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
 		<img src="images/photography/image2.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
