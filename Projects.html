@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Geel Sevathean - Electronics</title>
+	<title>Geel Sevathean - Projects</title>
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,7 @@
 	body {
 		--AccentColour: #DB859B;
 		--BackgroundColour: #FFFFFF;
+        --BackgroundContentColour: #000000;
 		--TextColourPrimary: #FFFFFF;
 		--TextColourSecondary: #000000;
 		font-family: Courier New;
@@ -34,6 +35,43 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+	}
+    .contentContainer {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+    .contentBox {
+		font-family: Oswald;
+		font-weight: 300;
+		text-align: center;
+		color: var(--TextColourPrimary);
+        font-size: 35px;
+        background-color: var(--AccentColour);
+        height: 400px;
+        width: 300px;
+        border-radius: 10px;
+	}
+    .contentContainer a {
+        text-decoration: none;
+    }
+    .contentBox:hover {
+        color: var(--AccentColour);
+        background-color: var(--BackgroundContentColour);
+        font-weight: 250;
+    }
+    .contentHeader{
+        padding: 14px 16px;
+    }
+	.contentBox img{
+        max-width: 100%;
+		height: auto;
+		border-radius: 10px;
+        padding: 50;
 	}
 	h1 {
 		font-family: Oswald;
@@ -94,13 +132,34 @@
 				<div class="navbar-nav">
 					<a class="nav-item nav-link" href="index.html">Home</a>
 					<a class="nav-item nav-link" href="Photography.html">Photography</a>
-					<a class="nav-item nav-link" href="Electronics.html">Electronics</a>
-					<a class="nav-item nav-link" href="CAD.html">Cad</a>
+					<a class="nav-item nav-link" href="Projects.html">Projects</a>
+					<a class="nav-item nav-link" href="Android_Development.html">Android Development</a>
 					<a class="nav-item nav-link" href="About_Me.html">About Me</a>
 				</div>
 			</div>
 		</nav>
-	<h1> WORK IN PROGRESS </h1>
+        <div class="contentContainer">
+            <a href="Projects_Resources/Vinyl_Holder.html" class="contentBox">
+                <img src="images/projects/Vinyl_Holder/VinylMounts.png" alt="Vinyl Holder">
+                <div class="contentHeader">Vinyl Holder</div>
+            </a>
+            <a href="Projects_Resources/WHCH710n.html" class="contentBox">
+                <img src="images/projects/WHCH710n_Arm/ArmPhoto.png" alt="WHCH710n Arms">
+                <div class="contentHeader">WHCH710n Arms</div>
+            </a>
+            <a href="Projects_Resources/SUMOBOT_V1.html" class="contentBox">
+                <img src="images/projects/SumoBot/sumobot.jpg" alt="SUMOBOT V1">
+                <div class="contentHeader">SUMOBOT V1</div>
+            </a>
+			<a href="Projects_Resources/NotanIED.html" class="contentBox">
+                <img src="images/projects/SevSeg/sevseg.jpg" alt="Not An I.E.D">
+                <div class="contentHeader">Not An I.E.D</div>
+            </a>
+			<a href="Projects_Resources/LED_MATRIX_V1.html" class="contentBox">
+                <img src="images/projects/Matrix/Matrix.png" alt="LED MATRIX V1">
+                <div class="contentHeader">LED MATRIX V1</div>
+            </a>
+        </div>        
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!--Bootstrap-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> <!--Bootstrap-->
