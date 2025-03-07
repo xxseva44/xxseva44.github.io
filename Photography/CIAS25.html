@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geel Sevathean - Photography</title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Bootstrap-->
+</head>
+<style>
+	body {
+		font-family: Courier New;
+		background-color: #FFFFFF;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:visited{
+		color: #FFFFFF;
+		border-radius: 0%;
+		border-color: rgba(0,0,0,0);
+	}
+	.btn-outline-primary:hover{
+		border-color: rgba(0,0,0,0);
+		background-color: rgba(0,0,0,0);
+	}
+	h1 {
+		font-family: Oswald;
+		text-align: center;
+		color: #000000;
+		padding: 14px 16px;
+		font-size: 35px;
+		margin: 0;
+	}
+	h2 {
+		font-family: Oswald;
+		font-weight: 300;
+		text-align: left;
+		color: #FFFFFF;
+		padding: 14px 16px;
+		font-size: 35px;
+		margin: 0;
+	}
+	h3 {
+		font-weight: 500;
+		text-align: left;
+		color: #FFFFFF;
+		padding: 14px 16px;
+		font-size: 30px;
+		margin: 0;
+	}
+	p {
+		font-family: Oswald;
+		font-weight: 300;
+		text-align: left;
+		text-wrap: wrap;
+		color: #FFFFFF;
+		padding: 14px 16px;
+		font-size: 18px;
+		margin: 0;
+	}
+	footer {
+		font-family: Oswald;
+		font-weight: 400;
+		text-align: left;
+		padding: 50px;
+		background-color: #DB859B;
+		color: #000000;
+		line-height: 0.5;
+	}
+	footer a{
+		font-weight: 300;
+		color: #000000;
+	}
+	.navbar-custom {
+		background-color: #000000;
+		color: #FFFFFF;
+	}
+	.custom-toggler.navbar-toggler {
+		border-color:#FFFFFF
+	}
+	.custom-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(219,133,155, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	}
+	.nav-item {
+		font-size: 20px;
+		font-family: DotGothic16;
+		color: #FFFFFF;
+	}
+	.nav-item_extras {
+		font-size: 12px;
+		font-family: DotGothic16;
+		color: #FFFFFF;
+	}
+	.nav-item:hover {
+		color: #DB859B;
+	}
+	.nav-item_extras:hover {
+		color: #DB859B;
+	}
+	img{
+		width: 48vh;
+		height: 27vh;
+	}
+	.blurbPhotoGrid-container{
+		position: relative;
+	}
+	.photoGrid{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		background-color: #000000;
+	}
+	.blurb{
+		position: absolute;
+		float: left;
+		width: 20%;
+		height: auto;
+		background-color: rgba(219,133,155,0.8);
+	}
+	@media only screen and (max-width: 500px) {
+		.blurb{
+			width: auto;
+			height: auto;
+			background-color: rgba(219,133,155,0.8);
+		}
+	}
+	.highlights{
+		width: 80%;
+		background-color: #000000;
+	}
+</style>
+<body>
+<h1>GEEL SEVATHEAN</h1>
+<nav class="navbar navbar-expand-lg navbar-custom">
+	<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<div class="navbar-nav">
+			<a class="nav-item nav-link" href="../index.html">Home</a>
+			<a class="nav-item nav-link" href="../Photography.html">Photography</a>
+			<a class="nav-item nav-link" href="../Projects.html">Projects</a>
+			<a class="nav-item nav-link" href="../Android_Development.html">Android Development</a>
+			<a class="nav-item nav-link" href="../About_Me.html">About Me</a>
+		</div>
+	</div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-custom">
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<div class="navbar-nav">
+			<a class="nav-item_extras nav-link" href="../Photography/CIAS25.html">CIAS 25</a>
+			<a class="nav-item_extras nav-link" href="../Photography/MTL24.html">MTL 24</a>
+		</div>
+	</div>
+</nav>
+<div class="blurbPhotoGrid-container">
+	<div class="blurb">
+</div>
+	<div class="photoGrid">
+		<img src="../images/photography/CIAS25/CIAS25-102.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-107.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-110.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-112.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-113.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-114.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-115.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-116.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-117.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-119.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-120.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-121.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-123.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-125.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-128.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-131.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-132.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-133.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-134.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-137.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-139.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-141.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-142.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-143.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-144.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-149.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-150.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-153.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-155.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-156.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-157.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-158.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-159.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-161.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-166.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-169.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-170.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-172.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-173.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-177.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-179.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-181.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-182.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-183.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-184.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-185.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-186.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-187.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-188.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-189.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-193.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-194.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-196.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-197.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-200.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+        <img src="../images/photography/CIAS25/CIAS25-202.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+	</div>
+</div>
+	
+	
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!--Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> <!--Bootstrap-->
+	<script>
+		AOS.init();
+	</script>
+</body>
+<footer>
+	Find me:
+	<a href="mailto:inquiries.geels@gmail.com">Email</a>
+	<a href="https://www.linkedin.com/in/geel-sevathean/">LinkedIn</a>
+	<a href="https://github.com/xxseva44">GitHub</a>
+	<a href="https://xdaforums.com/m/xxseva44.9930734/">XDA</a>
+	<a href="https://www.instagram.com/txrtl3.me/">Instagram</a>
+</footer>
+</html>
