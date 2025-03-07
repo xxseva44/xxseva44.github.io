@@ -26,6 +26,7 @@
 		--AccentColour: #DB859B;
 		--BackgroundColour: #FFFFFF;
         --BackgroundContentColour: #000000;
+		--HoverContentColour: #54333C;
 		--TextColourPrimary: #FFFFFF;
 		--TextColourSecondary: #000000;
 		font-family: Courier New;
@@ -41,37 +42,36 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 40px;
+        gap: 8px;
         margin-top: 8%;
         margin-bottom: 8%;
     }
     .contentBox {
-		font-family: Oswald;
-		font-weight: 300;
-		text-align: center;
-		color: var(--TextColourPrimary);
-        font-size: 35px;
         background-color: var(--AccentColour);
-        height: 400px;
+        height: 366.5px;
         width: 300px;
-        border-radius: 10px;
+        border-radius: 5px;
 	}
     .contentContainer a {
-        text-decoration: none;
-		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
     }
     .contentBox:hover {
         color: var(--AccentColour);
-        background-color: var(--BackgroundContentColour);
+        background-color: var(--HoverContentColour);
         font-weight: 250;
     }
     .contentHeader{
-        padding: 14px 16px;
+		text-align: center;
+		color: var(--TextColourPrimary);
+		font-family: Oswald;
+		font-weight: 300;
+		font-size: 30px;
+        padding: 7px 8px;
     }
 	.contentBox img{
         max-width: 100%;
 		height: auto;
-		border-radius: 10px;
+		border-radius: 5px;
         padding: 50;
 	}
 	h1 {
