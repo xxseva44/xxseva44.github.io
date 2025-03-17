@@ -11,22 +11,47 @@
 </head>
 <style>
 	:root {
-		--HeaderFontSize: 170px;
-		--SCRLHeaderFontSize: 80px;
+		--HeaderFontSize: 6vw;
+		--SegmentTitleFontSize: 10vw;
+		--SegmentParagraphFontSize: 1.2vw;
+		--SCRLHeaderFontSize: 60px;
 		--ParagraphTextSize: 18px;
-	}
-	@media only screen and (max-width: 500px) {
-		:root {
-			--HeaderFontSize: 80px;
-			--SCRLHeaderFontSize: 50px;
-			--ParagraphTextSize: 18px;
-		}
-	}
-	body {
+
+		--HeaderTop: 60%;
+		--HeaderLeft: 70%;
+		--HeaderContentMinimize: 15vw;
+		--HeaderContentStandard: 50vw;
+		--HeaderContentBoxWidth: 35vw;
+		--SCRLHeaderContentBoxWidth: 30vw;
+
+		--ScrollLocationTrigger: 10;
+
 		--AccentColour: #DB859B;
 		--BackgroundColour: #FFFFFF;
 		--TextColourPrimary: #FFFFFF;
 		--TextColourSecondary: #000000;
+		--HighlightForeground: #FFFFFF;
+		--HighlightBackground: #000000;
+	}
+	@media only screen and (max-width: 1000px) {
+		:root {
+			--HeaderFontSize: 15vw;
+			--SegmentTitleFontSize: 10vw;
+			--SegmentParagraphFontSize: 4vw;
+			--SCRLHeaderFontSize: 10vw;
+			--ParagraphTextSize: 18px;
+
+			--HeaderTop: 40%;
+			--HeaderLeft: 60%;
+			--HeaderContentMinimize: 30vw;
+			--HeaderContentStandard: 180vw;
+			--HeaderContentBoxWidth: 80vw;
+			--SCRLHeaderContentBoxWidth: 70vw;
+
+			--ScrollLocationTrigger: 10;
+		}
+	}
+	body {
 		font-family: Courier New;
 		background-color: var(--BackgroundColour);
 		display: flex;
@@ -34,23 +59,6 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-	}
-	.contentContainer {
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 8%;
-    }
-	.contentContainer img{
-    	align-items: center;
-		padding: 15px 80px 15px 80px;
-	}
-    .contentHeader {
-		font-family: Oswald;
-		font-weight: 300;
-		font-size: 60px;
-		text-align: center;
-		color: var(--TextColourSecondary);
 	}
 	h1 {
 		font-family: Oswald;
@@ -81,6 +89,82 @@
 	footer a{
 		font-weight: 300;
 		color: var(--TextColourSecondary);
+	}
+	#HeaderContainer {
+    position: relative;
+    width: 100%;
+	}
+	#header {
+    position: absolute;
+    top: var(--HeaderTop);
+    left: var(--HeaderLeft);
+    transform: translate(-50%, -50%);
+    font-family: Oswald;
+	font-weight: 350;
+    color: var(--TextColourSecondary);
+    font-size: var(--HeaderFontSize);
+    text-align: center;
+    z-index: 2;
+	background-color: var(--BackgroundColour);
+	width: var(--HeaderContentBoxWidth);
+	transition: 1.2s;
+	}
+	#SegmentContainer {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 5vw;
+	}
+	#segment-content {
+	align-items: center;
+	flex: 1;
+	min-width: 300px;
+	padding:  16px;
+	}
+	#SegmentImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+	}
+	#SegmentImage img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+	}
+	#SegmentTitle {
+    font-family: Oswald;
+	font-weight: 350;
+    color: var(--TextColourSecondary);
+    font-size: var(--SegmentTitleFontSize);
+    text-align: center;
+	margin-bottom: 4vw;
+	margin-top: 10vw;
+	}
+	#SegmentParagraph {
+    font-family: Oswald;
+	font-weight: 200;
+    color: var(--TextColourSecondary);
+    font-size: var(--SegmentParagraphFontSize);
+    text-align: center;
+	margin-left: 12vw;
+	margin-right: 12vw;
+	margin-top: 5vw;
+	}
+	#HeaderContainer_img {
+	position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--HeaderContentStandard);
+    overflow: hidden;
+    z-index: 1;
+	transition: 1.2s;
+	}
+	mark {
+	padding: 5px;
+  	background-color: var(--HighlightBackground);
+  	color: var(--HighlightForeground);
 	}
 	.navbar-custom {
 		background-color: #000000;
@@ -117,12 +201,63 @@
 				</div>
 			</div>
 		</nav>
-		<div class = "contentContainer">
-			<div class = "contentHeader">Page In Development.</div>
+		<div id="HeaderContainer">
+			<div id="header">
+				Vinyl Holder.
+			</div>
+			<div id="HeaderContainer_img">
+				<img src="../images/projects/Vinyl_Holder/R10.png">
+			</div>
+		</div>
+		<div id="SegmentContainer">
+			<div class="segment-content">
+				<div id="SegmentTitle">
+					Vinyl Wall Mounting, <br>
+					Made Easy.
+				</div>
+				<div id="SegmentImage">
+					<img src="../images/projects/Vinyl_Holder/R10_Alt1.png" alt="Alternate view of vinyl wall">
+				</div>
+				<div id="SegmentParagraph">
+					With a focus on elegance, ease of use and a tame design; this easy to use vinyl wall mount solution allows for a low profile, secure mount all while allowing the release of the vinyl with a pull of the tab. Being composed of 2 corner pieces, they simply mount opposite to eacher other.
+				</div>
+			</div>
+			<div class="segment-content">
+				<div id="SegmentTitle">
+					Lets Take A Closer Look.
+				</div>
+				<div id="SegmentImage">
+					<img src="../images/projects/Vinyl_Holder/R10_Alt2.png" alt="Alternate view of vinyl wall">
+				</div>
+				<div id="SegmentParagraph">
+					Being a low profile mount, this is unlike other "mounts" that require the vinyl sleeve to simply sit on what is essentially a ledge; users will have a hard time trying to knock sleeves off the wall with this mount. Further more, it does not reqire much additional space to position sleeves into the mount, allowing for a densely packed display wall. 
+				</div>
+			</div>
 		</div>
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!--Bootstrap-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> <!--Bootstrap-->
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		let SCRLHeaderFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('--SCRLHeaderFontSize');
+		let HeaderFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderFontSize');
+		let HeaderContentMinimize = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderContentMinimize');
+		let HeaderContentStandard = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderContentStandard');
+		let ScrollLocationTrigger = window.getComputedStyle(document.documentElement).getPropertyValue('--ScrollLocationTrigger');
+		let HeaderContentBoxWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderContentBoxWidth');
+		let SCRLHeaderContentBoxWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--SCRLHeaderContentBoxWidth');
+		function scrollFunction() {
+			if (document.body.scrollTop > ScrollLocationTrigger || document.documentElement.scrollTop > ScrollLocationTrigger) {
+				document.getElementById("header").style.fontSize = SCRLHeaderFontSize;
+				document.getElementById("header").style.width =SCRLHeaderContentBoxWidth;
+				document.getElementById("HeaderContainer_img").style.height = HeaderContentMinimize;
+			} else {
+				document.getElementById("header").style.fontSize = HeaderFontSize;
+				document.getElementById("header").style.width = HeaderContentBoxWidth;
+				document.getElementById("HeaderContainer_img").style.height = HeaderContentStandard;
+			}
+		}
+	</script>
 </body>
 <footer>
 	Find me:
