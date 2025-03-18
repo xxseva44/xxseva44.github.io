@@ -121,20 +121,25 @@
 	#SegmentContainer {
 	display: flex;
 	flex-wrap: nowrap;
-	margin-bottom: 5vw;
+	padding-top: 5vw;
+	background-color: #000000;
 	}
 	@media only screen and (max-width: 1000px) {
 		#SegmentContainer {
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: 5vw;
+		padding-bottom: 5vw;
 		}
 	}
 	.segmentContent {
 	align-items: center;
 	flex: 1;
-	min-width: 300px;
 	padding:  16px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	margin: 6px;
+	box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+	min-width: 300px;
 	}
 	#SegmentImage {
     display: flex;
@@ -146,7 +151,7 @@
     max-width: 90%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
 	}
 	#SegmentTitle {
     font-family: Oswald;
@@ -159,7 +164,7 @@
 	}
 	#SegmentParagraph {
     font-family: Oswald;
-	font-weight: 200;
+	font-weight: 300;
     color: var(--TextColourSecondary);
     font-size: var(--SegmentParagraphFontSize);
     text-align: center;
