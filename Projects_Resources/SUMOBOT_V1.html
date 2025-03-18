@@ -11,14 +11,27 @@
 </head>
 <style>
 	:root {
-		--HeaderFontSize: 90px;
-		--HeaderFontLineHeight: 90px;
-		--SegmentTitleFontLineHeight: 10vw;
-		--SegmentTitleFontSize: 10vw;
+		--HeaderFontSize: 6vw;
+		--SegmentTitleFontSize: 2.5vw;
 		--SegmentParagraphFontSize: 1.2vw;
 		--SCRLHeaderFontSize: 60px;
-		--SCRLFontLineHeight: 90px;
 		--ParagraphTextSize: 18px;
+
+		--HeaderTop: 50%;
+		--HeaderLeft: 70%;
+		--HeaderContentMinimize: 15vw;
+		--HeaderContentStandard: 50vw;
+
+		--HeaderContentBoxWidth: 28vw;
+		--SCRLHeaderContentBoxWidth: 20vw;
+
+		--SegmentParagraphMargin: 2vw;
+		--SegmentParagraphMarginTop: 1vw;
+		
+		--SegmentTitleMarginTop: 4vw;
+		--SegmentTitleMarginBottom: 1vw;
+
+		--ScrollLocationTrigger: 10;
 
 		--AccentColour: #DB859B;
 		--BackgroundColour: #FFFFFF;
@@ -27,16 +40,26 @@
 		--HighlightForeground: #FFFFFF;
 		--HighlightBackground: #000000;
 	}
-	@media only screen and (max-width: 500px) {
+	@media only screen and (max-width: 1000px) {
 		:root {
 			--HeaderFontSize: 15vw;
-			--HeaderFontLineHeight: 90px;
-			--SegmentTitleFontLineHeight: 90px;
-			--SCRLFontLineHeight: 60px;
-			--SegmentTitleFontSize: 10vw;
-			--SegmentParagraphFontSize: 4vw;
-			--SCRLHeaderFontSize: 30px;
+			--SegmentTitleFontSize: 8vw;
+			--SegmentParagraphFontSize: 3.5vw;
+			--SCRLHeaderFontSize: 7vw;
 			--ParagraphTextSize: 18px;
+
+			--HeaderTop: 50%;
+			--HeaderLeft: 60%;
+			--HeaderContentMinimize: 30vw;
+			--HeaderContentStandard: 150vw;
+			--HeaderContentBoxWidth: 75vw;
+			--SCRLHeaderContentBoxWidth: 35vw;
+			--SegmentParagraphMargin: 8vw;
+			--SegmentParagraphMarginBottom: 5vw;
+			--SegmentTitleMarginTop: 10vw;
+			--SegmentTitleMarginBottom: 4vw;
+
+			--ScrollLocationTrigger: 10;
 		}
 	}
 	body {
@@ -84,68 +107,80 @@
 	}
 	#header {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: var(--HeaderTop);
+    left: var(--HeaderLeft);
     transform: translate(-50%, -50%);
     font-family: Oswald;
-	font-weight: 500;
+	font-weight: 350;
     color: var(--TextColourSecondary);
     font-size: var(--HeaderFontSize);
     text-align: center;
     z-index: 2;
-	transition: 1.1s;
+	background-color: var(--BackgroundColour);
+	width: var(--HeaderContentBoxWidth);
+	transition: 1.2s;
 	}
 	#SegmentContainer {
-    padding: 80px;
-	margin-top: 100px
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 5vw;
 	}
-	.segment-content {
+	@media only screen and (max-width: 1000px) {
+		#SegmentContainer {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 50px;
-		align-items: center;
+		margin-bottom: 5vw;
+		}
 	}
-	#SegmentText {
-		flex: 1;
-		min-width: 300px;
-		padding:  16px;
+	.segmentContent {
+	align-items: center;
+	flex: 1;
+	min-width: 300px;
+	padding:  16px;
 	}
 	#SegmentImage {
-		flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 	}
 	#SegmentImage img {
-		max-width: 70%;
-		height: auto;
-		border-radius: 10px;
-		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-		margin: 90px
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 	}
 	#SegmentTitle {
     font-family: Oswald;
 	font-weight: 350;
     color: var(--TextColourSecondary);
     font-size: var(--SegmentTitleFontSize);
-	line-height: var(--SegmentTitleFontLineHeight);
-    text-align: left;
-	margin-bottom: 25px;
+    text-align: center;
+	margin-bottom: var(--SegmentTitleMarginBottom);
+	margin-top: var(--SegmentTitleMarginTop);
 	}
 	#SegmentParagraph {
     font-family: Oswald;
-	font-weight: 300;
+	font-weight: 200;
     color: var(--TextColourSecondary);
     font-size: var(--SegmentParagraphFontSize);
-    text-align: left;
-	text-indent: 50px;
+    text-align: center;
+	margin-left: var(--SegmentParagraphMargin);
+	margin-right: var(--SegmentParagraphMargin);
+	margin-top:var(--SegmentParagraphMarginTop);
+	}
+	#SegmentParagraph a{
+		color: var(--AccentColour);
 	}
 	#gif-container {
-    position: relative;
+	position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: var(--HeaderContentStandard);
     overflow: hidden;
     z-index: 1;
-    transition: 0.8s;
+	transition: 1.2s;
 	}
 	mark {
 	padding: 5px;
@@ -189,7 +224,7 @@
 		</nav>
 		<div id="HeaderContainer">
 			<div id="header">
-				SUMO(<span style="color:var(--AccentColour)">BOT</span>)
+				SUMO[<span style="color:var(--AccentColour)">BOT</span>]
 				<br>
 				WRESTLING
 			</div>
@@ -198,65 +233,37 @@
 			</div>
 		</div>
 		<div id="SegmentContainer">
-			<div class="segment-content">
-				<div id="SegmentText">
-					<div id="SegmentTitle">
-						About SumoBots:
-					</div>
-					<div id="SegmentParagraph">
-						Sumo bots are small, autonomous robots designed to compete in a robotic version of sumo wrestling. The objective is simple: push the opposing robot out of a defined circular ring, called a "dohyo," while staying within the boundaries. These robots typically use sensors, motors, and a microcontroller to detect their opponent and strategize movements. Sumo bots come in various weight classes, from lightweight to heavyweight, and are governed by strict size and design rules to ensure fair play. Often built with a focus on speed, traction, and pushing power, with features like wedge-shaped bodies to get under opponents or high-torque motors for strength. Some employ advanced tactics, such as using infrared sensors to avoid falling off the ring or to track the opponent's location. Sumo bot competitions combine engineering, programming, and strategic thinking.
-					</div>
+			<div class="segmentContent">
+				<div id="SegmentTitle">
+					About SumoBots:
 				</div>
 				<div id="SegmentImage">
-					<img src="https://rteamrobotics.weebly.com/uploads/2/9/4/6/29465029/20160917-sumo-robots_orig.jpg" alt="An image of the SumoBot V1 project on a competition dohyo" img align="right">
+					<img src="https://rteamrobotics.weebly.com/uploads/2/9/4/6/29465029/20160917-sumo-robots_orig.jpg" alt="An image of the SumoBot V1 project on a competition dohyo">
+				</div>
+				<div id="SegmentParagraph">
+					Sumo bots are small, autonomous robots designed to compete in a robotic version of sumo wrestling. The objective is simple: push the opposing robot out of a defined circular ring, called a "dohyo," while staying within the boundaries. These robots typically use sensors, motors, and a microcontroller to detect their opponent and strategize movements. Sumo bots come in various weight classes, from lightweight to heavyweight, and are governed by strict size and design rules to ensure fair play. Often built with a focus on speed, traction, and pushing power, with features like wedge-shaped bodies to get under opponents or high-torque motors for strength. Some employ advanced tactics, such as using infrared sensors to avoid falling off the ring or to track the opponent's location. Sumo bot competitions combine engineering, programming, and strategic thinking.
 				</div>
 			</div>
-			<div class="segment-content">
-				<div id="SegmentImage">
-					<img src="../images/projects/SumoBot/sumobot.jpg" alt="An image of the SumoBot V1 project on a competition dohyo" img align="left">
-				</div>
-				<div id="SegmentText">
-					<div id="SegmentTitle">
-						My SumoBot.
-					</div>
-					<div id="SegmentParagraph">
-						With an ESP32 at the heart of it and a standard arduino uno R3 and it's ATMEGA328P, this sumo bot is equipped with 3 sonar sensors, 2 “line detection” devices, a rear facing infrared based distance sensor, and a display to display live sensor data and visuals. An  arduino R3 as a GPIO expander is used, using serial communication between the two to allow for co-operation. 
-					</div>
-				</div>
-			</div>
-			<div class="segment-content">
-				<div id="SegmentText">
-					<div id="SegmentTitle">
-						Platform overview:
-					</div>
-					<div id="SegmentParagraph">
-						This SumoBot revolves around the ESP32, a powerful, smaller soc and as a result; this will allow for greater space allocation to other components as this is a smaller microcontroller. The ESP32 also contains greater capabilities in comparison to the ATmega and Atmel based arduinos while being smaller allowing for greater flexibility in terms of location. For this sumo bot, the ESP32 will be doing all the processing for camera, display and driving commands. The Arduino Uno R3 in addition to the ESP32 that will interface with the motor driver, sonar array and line detection. Between the two, there will be a connection established over I2c, however due to their differing logic voltages, a bidirectional logic level shifter will be implemented as the ESP32 operates at 3.3V whereas the Uno R3 uses 5V logic. The arduino is also needed as there are simply not enough connections on the ESP32 to directly connect all the systems. One could argue that an I2c based GPIO expander could be used however due to time constraints and the availability of UNO R3s as well as experience with the I2c interface; this was the solution applied – although yes, an expander of sorts could also be used. The “drivetrain” of the sumobot will be using standard, geared DC motors and motor driver. As for power, the entire bot will be powered using a 9v battery pack that will attach to a power distribution board to supply the appropriate voltages to the respective components.
-					</div>
+			<div class="segmentContent">
+				<div id="SegmentTitle">
+					My SumoBot.
 				</div>
 				<div id="SegmentImage">
-					<img src="../images/projects/SumoBot/sumobot.jpg" alt="An image of the SumoBot V1 project on a competition dohyo" img align="right">
+					<img src="../images/projects/SumoBot/sumobot.jpg" alt="An image of the SumoBot V1 project on a competition dohyo">
+				</div>
+				<div id="SegmentParagraph">
+					My sumobot was designed with a offensive first mindset. There is no need for defense if the bot can autonomously survey the area and stay prepared for potential attacks. Being a fully 3d printed chassis designed by myself, i focused on reducing as much material in the areas unseen, utilizing additional perforations and finding an ideal infill ratio with respects to rigidity to filament use.
 				</div>
 			</div>
-			<div class="segment-content">
-				<div id="SegmentText">
-					<div id="SegmentTitle" style="font-weight: 200; margin-top: 300px">
-						Technical Specifications:
-					</div>
-					<div id="SegmentParagraph" style="text-indent: 0px; margin-left: 50px;">
-						1x ESP32-S3
-						<br>
-						1x Arduino Uno R3
-						<br>
-						3x HC-SR04
-						<br>
-						2x “Line Detection” circuits
-						<br>
-						1x Sharp Distance Sensor
-						<br>
-						2x 4 slot AA Battery holder
-						<br>
-						<a href="https://github.com/xxseva44/Sumo-Bot-Final-TEJ1OI">CODE</a>
-					</div>
+			<div class="segmentContent">
+				<div id="SegmentTitle">
+					Platform overview:
+				</div>
+				<div id="SegmentImage">
+					<img src="../images/projects/SumoBot/FAncyCodeSumo.png" alt="An image with fancy schamnsy code">
+				</div>
+				<div id="SegmentParagraph">
+					Revolving around an ESP32 being the mastermind of the operation and a more traditional Arduino UNO R3 being a slave/crude GPIO expander; this sumobot makes use of a triple sonar array scanning areas in front and behind, effectively allowing it to foresee all potential attacks. Using a custom serial interface, I developed a custom circuit to allow communication between the respective 5v logic and 3v logic seen on the R3 and ESP32.
 				</div>
 			</div>
 		</div>
@@ -267,17 +274,24 @@
 		window.onscroll = function() {scrollFunction()};
 		let SCRLHeaderFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('--SCRLHeaderFontSize');
 		let HeaderFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderFontSize');
+		let HeaderContentMinimize = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderContentMinimize');
+		let HeaderContentStandard = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderContentStandard');
+		let HeaderContentBoxWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderContentBoxWidth');
+		let SCRLHeaderContentBoxWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--SCRLHeaderContentBoxWidth');
 		function scrollFunction() {
 			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 				document.getElementById("header").style.fontSize = SCRLHeaderFontSize;
-				document.getElementById("header").style.lineHeight = SCRLHeaderFontSize;
-				document.getElementById("gif-container").style.height = "25vw"
+				document.getElementById("gif-container").style.height = HeaderContentMinimize;
+				document.getElementById("header").style.width =SCRLHeaderContentBoxWidth;
 			} else {
 				document.getElementById("header").style.fontSize = HeaderFontSize;
-				document.getElementById("gif-container").style.height = "50vw"
-				document.getElementById("header").style.lineHeight = HeaderFontSize;
+				document.getElementById("header").style.width = HeaderContentBoxWidth;
+				document.getElementById("gif-container").style.height = HeaderContentStandard;
 			}
 		}
+	</script>
+	<script>
+		AOS.init();
 	</script>
 </body>
 <footer>
