@@ -12,8 +12,8 @@
 <style>
 	:root {
 		--HeaderFontSize: 6vw;
-		--SegmentTitleFontSize: 10vw;
-		--SegmentParagraphFontSize: 1.2vw;
+		--SegmentTitleFontSize: 2.2vw;
+		--SegmentParagraphFontSize: 1.5vw;
 		--SCRLHeaderFontSize: 60px;
 		--ParagraphTextSize: 18px;
 
@@ -23,6 +23,10 @@
 		--HeaderContentStandard: 50vw;
 		--HeaderContentBoxWidth: 35vw;
 		--SCRLHeaderContentBoxWidth: 30vw;
+		--SegmentParagraphMargin: 4vw;
+		--SegmentParagraphMarginTop: 3vw;
+		--SegmentTitleMarginTop: 4vw;
+		--SegmentTitleMarginBottom: 2vw;
 
 		--ScrollLocationTrigger: 10;
 
@@ -36,17 +40,22 @@
 	@media only screen and (max-width: 1000px) {
 		:root {
 			--HeaderFontSize: 15vw;
-			--SegmentTitleFontSize: 10vw;
-			--SegmentParagraphFontSize: 4vw;
+			--SegmentTitleFontSize: 8vw;
+			--SegmentParagraphFontSize: 3.5vw;
 			--SCRLHeaderFontSize: 10vw;
 			--ParagraphTextSize: 18px;
 
-			--HeaderTop: 40%;
+			--HeaderTop: 30%;
 			--HeaderLeft: 60%;
 			--HeaderContentMinimize: 30vw;
 			--HeaderContentStandard: 180vw;
 			--HeaderContentBoxWidth: 80vw;
 			--SCRLHeaderContentBoxWidth: 70vw;
+			--SegmentParagraphMarginLeft: 12vw;
+			--SegmentParagraphMarginRight: 12vw;
+			--SegmentParagraphMarginBottom: 5vw;
+			--SegmentTitleMarginTop: 10vw;
+			--SegmentTitleMarginBottom: 4vw;
 
 			--ScrollLocationTrigger: 10;
 		}
@@ -111,10 +120,17 @@
 	}
 	#SegmentContainer {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	margin-bottom: 5vw;
 	}
-	#segment-content {
+	@media only screen and (max-width: 1000px) {
+		#SegmentContainer {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 5vw;
+		}
+	}
+	.segmentContent {
 	align-items: center;
 	flex: 1;
 	min-width: 300px;
@@ -138,8 +154,8 @@
     color: var(--TextColourSecondary);
     font-size: var(--SegmentTitleFontSize);
     text-align: center;
-	margin-bottom: 4vw;
-	margin-top: 10vw;
+	margin-bottom: var(--SegmentTitleMarginBottom);
+	margin-top: var(--SegmentTitleMarginTop);
 	}
 	#SegmentParagraph {
     font-family: Oswald;
@@ -147,9 +163,12 @@
     color: var(--TextColourSecondary);
     font-size: var(--SegmentParagraphFontSize);
     text-align: center;
-	margin-left: 12vw;
-	margin-right: 12vw;
-	margin-top: 5vw;
+	margin-left: var(--SegmentParagraphMargin);
+	margin-right: var(--SegmentParagraphMargin);
+	margin-top:var(--SegmentParagraphMarginTop);
+	}
+	#SegmentParagraph a{
+		color: var(--AccentColour);
 	}
 	#HeaderContainer_img {
 	position: relative;
@@ -210,10 +229,9 @@
 			</div>
 		</div>
 		<div id="SegmentContainer">
-			<div class="segment-content">
+			<div class="segmentContent">
 				<div id="SegmentTitle">
-					Vinyl Wall Mounting, <br>
-					Made Easy.
+					Mounting Made Easy.
 				</div>
 				<div id="SegmentImage">
 					<img src="../images/projects/Vinyl_Holder/R10_Alt1.png" alt="Alternate view of vinyl wall">
@@ -222,7 +240,7 @@
 					With a focus on elegance, ease of use and a tame design; this easy to use vinyl wall mount solution allows for a low profile, secure mount all while allowing the release of the vinyl with a pull of the tab. Being composed of 2 corner pieces, they simply mount opposite to eacher other.
 				</div>
 			</div>
-			<div class="segment-content">
+			<div class="segmentContent">
 				<div id="SegmentTitle">
 					Lets Take A Closer Look.
 				</div>
@@ -231,6 +249,18 @@
 				</div>
 				<div id="SegmentParagraph">
 					Being a low profile mount, this is unlike other "mounts" that require the vinyl sleeve to simply sit on what is essentially a ledge; users will have a hard time trying to knock sleeves off the wall with this mount. Further more, it does not reqire much additional space to position sleeves into the mount, allowing for a densely packed display wall. 
+				</div>
+			</div>
+			<div class="segmentContent">
+				<div id="SegmentTitle">
+					Interested?
+				</div>
+				<div id="SegmentImage">
+					<img src="../images/projects/Vinyl_Holder/R10.png" alt="Alternate view of vinyl wall">
+				</div>
+				<div id="SegmentParagraph">
+					At the moment, it is currently availible on my thingaverse account. You can find the STL files availible here: <br>
+					<a href="https://www.thingiverse.com/thing:6752291">Thingaverse - Vinyl Holder</a>
 				</div>
 			</div>
 		</div>
