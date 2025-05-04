@@ -1,0 +1,15 @@
+:root {
+    --AccentColour: #DB859B;
+    --AccentColourTranslucent: #db859a81;
+    --BackgroundColour: #000000;
+    --BackgroundColour_Light:#FFFFFF;
+    --BackgroundColourTranslucent: #000000bd;
+    --TextColourPrimary: #FFFFFF;
+    --TextColourSecondary: #000000;
+    --HighlightForeground: #FFFFFF;
+    --HighlightBackground: #000000;
+    --OutlineColourPrimary: #FFFFFF;
+    --PageBackgroundColour: #FFFFFF;
+    --Clear: #ffffff00;
+    --HoverContentColour: #DB859B;
+}

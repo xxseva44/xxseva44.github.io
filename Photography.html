@@ -1,203 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Geel Sevathean - Photography</title>
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Bootstrap-->
-</head>
+	<head>
+		<title>GS | Photo</title>
+		<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" >
+		<link href="Resources/Colours.css" rel="stylesheet" >
+		<link href="Resources/Text.css" rel="stylesheet" >
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	</head>
 <style>
-	body {
-		font-family: Courier New;
-		background-color: #FFFFFF;
+	.photoGrid {
 		display: flex;
-		flex-direction: column;
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
+		flex-flow: row wrap
 	}
-	.btn-outline-primary{
-		color: rgba(255,255,255,1) !important;
-		border-color: rgba(255,255,255,0) !important;
-	}
-	.btn-outline-primary:active, .btn-outline-primary:visited, .btn-outline-primary:focus, .btn-outline-primary:hover{
-    	outline: none !important;
-    	box-shadow: none !important;
-    	background-color: rgba(219,133,155,0.8) !important;
-	}
-	h1 {
-		font-family: Oswald;
-		text-align: center;
-		color: #000000;
-		padding: 14px 16px;
-		font-size: 35px;
-		margin: 0;
-	}
-	h2 {
-		font-family: Oswald;
-		font-weight: 300;
-		text-align: left;
-		color: #FFFFFF;
-		padding: 14px 16px;
-		font-size: 35px;
-		margin: 0;
-	}
-	h3 {
-		font-weight: 500;
-		text-align: left;
-		color: #FFFFFF;
-		padding: 14px 16px;
-		font-size: 30px;
-		margin: 0;
-	}
-	p {
-		font-family: Oswald;
-		font-weight: 300;
-		text-align: left;
-		text-wrap: wrap;
-		color: #FFFFFF;
-		padding: 14px 16px;
-		font-size: 18px;
-		margin: 0;
-	}
-	footer {
-		font-family: Oswald;
-		font-weight: 400;
-		text-align: left;
-		padding: 50px;
-		background-color: #DB859B;
-		color: #000000;
-		line-height: 0.5;
-	}
-	footer a{
-		font-weight: 300;
-		color: #000000;
-	}
-	.navbar-custom {
-		background-color: #000000;
-		color: #FFFFFF;
-	}
-	.custom-toggler.navbar-toggler {
-		border-color:#FFFFFF
-	}
-	.custom-toggler .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(219,133,155, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-	}
-	.nav-item {
-		font-size: 20px;
-		font-family: DotGothic16;
-		color: #FFFFFF;
-	}
-	.nav-item_extras {
-		font-size: 12px;
-		font-family: DotGothic16;
-		color: #FFFFFF;
-	}
-	.nav-item:hover {
-		color: #DB859B;
-	}
-	.nav-item_extras:hover {
-		color: #DB859B;
-	}
-	img{
+	.photoGrid img {
 		max-width: 50%;
 		min-width: auto;
 		height: auto;
 	}
-	.blurbPhotoGrid-container{
-		position: relative;
-	}
-	.photoGrid{
-		display: flex;
-		flex-flow: row wrap
-	}
-	.blurb{
-		width: 20%;
-		height: auto;
-		position:absolute;
-		z-index: 2;
-	}
-	@media only screen and (max-width: 500px) {
-		.blurb{
-			width: auto;
-			height: auto;
-		}
-	}
-	.highlights{
-		width: 80%;
-		background-color: #000000;
-	}
 </style>
 <body>
-<h1>GEEL SEVATHEAN</h1>
-<nav class="navbar navbar-expand-lg navbar-custom">
-	<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		<div class="navbar-nav">
-			<a class="nav-item nav-link" href="index.html">Home</a>
-			<a class="nav-item nav-link" href="Photography.html">Photography</a>
-			<a class="nav-item nav-link" href="Projects.html">Projects</a>
-			<a class="nav-item nav-link" href="Android_Development.html">Android Development</a>
-			<a class="nav-item nav-link" href="About_Me.html">About Me</a>
-		</div>
-	</div>
-</nav>
+<div class="Title">GEEL SEVATHEAN</div>
+<div id="Navigation"></div>
 <nav class="navbar navbar-expand-lg navbar-custom">
 		<div class="navbar-nav">
-			<a class="nav-item_extras nav-link" href="Photography/CIAS25.html">CIAS 25</a>
-			<a class="nav-item_extras nav-link" href="Photography/MTL24.html">MTL 24</a>
+			<a class="nav-itemExtra nav-link" href="/resources/Photography_Resources/MTL24.html">MTL 24</a>
+			<a class="nav-itemExtra nav-link" href="/resources/Photography_Resources/CIAS25.html">CIAS 25</a>
+            <a class="nav-itemExtra nav-link" href="/resources/Photography_Resources/MRU25.html">MRU 25</a>
 		</div>
 </nav>
-<div class="blurbPhotoGrid-container">
-    <div class="blurb collapse show" id="blurb" style ="background-color: rgba(219,133,155,0.8)">
-		<button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#blurb" aria-expanded="false" aria-controls="blurb">
+<div class="contentContainer">
+    <div id="blurb" class="blurb collapse show">
+		<button class="btn btn-outline-primary promptButton" type="button" data-toggle="collapse" data-target="#blurb" aria-expanded="false" aria-controls="blurb">
 			Show/Hide
 		</button>
-        <h2>Say Hello to My Little Friend. 
-        <br>(Aka my Canon T6)</h2>
-        <p>
+        <div class ="blurbTitle">Say Hello to My Little Friend. 
+        <br>(Aka my Canon T6)</div>
+        <div class ="blurbText">
             Beginning in middle school, I found my humble start waving around an old phone, attempting to capture the world in a lens similar to my own. After having obtained my current Canon T6 in 2017, it marked the growth of a significant skillset of mine. As the years went by, I further developed my creative eye and post-processing of images, which resulted in the artistry seen below.
-        </p>
+		</div>
     </div>
 	<div class="photoGrid">
-		<img src="images/photography/image1.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image2.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image3.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image4.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image5.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image6.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image7.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image8.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image9.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image10.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image11.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image12.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image13.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image14.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image15.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
-		<img src="images/photography/image16.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500">
+		<img src="Resources/images/photography/image1.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image2.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image3.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image4.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image5.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image6.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image7.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image8.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image9.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image10.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image11.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image12.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image13.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image14.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image15.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		<img src="Resources/images/photography/image16.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
 	</div>
 </div>
 	
-	
+
+<!-- JQuery-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!--Bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> <!--Bootstrap-->
-	<script>
-		AOS.init();
-	</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+	$(document).ready( function() {
+		$("#Navigation").load("Resources/Navigation.html");
+		$("footer").load("Resources/Footer.html")
+	});
+</script>
+<script>
+	AOS.init();
+</script>
 </body>
-<footer>
-	Find me:
-	<a href="mailto:inquiries.geels@gmail.com">Email</a>
-	<a href="https://www.linkedin.com/in/geel-sevathean/">LinkedIn</a>
-	<a href="https://github.com/xxseva44">GitHub</a>
-	<a href="https://xdaforums.com/m/xxseva44.9930734/">XDA</a>
-	<a href="https://www.instagram.com/txrtl3.me/">Instagram</a>
-</footer>
+<footer></footer>
 </html>

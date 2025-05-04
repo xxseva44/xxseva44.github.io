@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SumoBot</title>
+		<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" >
+		<link href="/Resources/Colours.css" rel="stylesheet" >
+		<link href="/Resources/Text.css" rel="stylesheet" >
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+<style>
+	:root {
+		--HeaderCaptionFontSize: 5vw;
+		--SCRLHeaderCaptionFontSize: 4vw;
+		--HeaderCaptionContentMinimize: 10vw;
+		--HeaderCaptionContentStandard: 25vw;
+		--HeaderCaptionContentBoxWidth: 50vw;
+
+		--ParagraphTextSize: 10px;
+
+		--SegmentTitleFontSize: 2.2vw;
+		--SegmentParagraphFontSize: 1vw;
+		--SegmentParagraphMargin: 2vw;
+		--SegmentParagraphMarginTop: 3vw;
+		--SegmentTitleMarginTop: 1vw;
+		--SegmentTitleMarginBottom: 1vw;
+
+		--ScrollLocationTrigger: 10;
+
+	}
+	@media only screen and (max-width: 1000px) {
+		:root {
+			--HeaderCaptionFontSize: 9vw;
+			--SCRLHeaderCaptionFontSize: 6vw;
+			--HeaderCaptionContentMinimize: 10vw;
+			--HeaderCaptionContentStandard: 160vw;
+			--HeaderCaptionContentBoxWidth: 80vw;
+
+			--ParagraphTextSize: 10px;
+
+			--SegmentTitleFontSize: 8vw;
+			--SegmentParagraphFontSize: 3.5vw;
+			--SegmentParagraphMarginLeft: 12vw;
+			--SegmentParagraphMarginRight: 12vw;
+			--SegmentParagraphMarginBottom: 5vw;
+			--SegmentTitleMarginTop: 10vw;
+			--SegmentTitleMarginBottom: 4vw;
+
+			--ScrollLocationTrigger: 10;
+		}
+	}
+	body {
+		background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzhpOHQyd2JiMnR3ejV5ZWNkYTQyZWhtY3F1NG02dzVkN3c3MmRyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j2RhGVQVNW9IiR6qZe/giphy.gif');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+</style>
+<body>
+	<div class="Title"> GEEL SEVATHEAN </div>
+	<div id="Navigation"></div>
+		<div id="HeaderCaptionContainer">
+			<div id="HeaderCaptionContainer_Background"></div>
+			<div id="HeaderCaption">
+				<span class ="highlight">
+					Sumo Wrestling but... <br> <span style="color:var(--AccentColour)">Robots</span>?
+				</span>
+			</div>
+		</div>
+		<div id="SegmentContainer">
+			<div class="segmentContent">
+				<div id="SegmentTitle">
+					About SumoBots:
+				</div>
+				<div id="SegmentImage">
+					<img src="https://rteamrobotics.weebly.com/uploads/2/9/4/6/29465029/20160917-sumo-robots_orig.jpg" alt="An image of the SumoBot V1 project on a competition dohyo">
+				</div>
+				<div id="SegmentParagraph">
+					Sumo bots are small, autonomous robots designed to compete in a robotic version of sumo wrestling. The objective is simple: push the opposing robot out of a defined circular ring, called a "dohyo," while staying within the boundaries. These robots typically use sensors, motors, and a microcontroller to detect their opponent and strategize movements. Sumo bots come in various weight classes, from lightweight to heavyweight, and are governed by strict size and design rules to ensure fair play. Often built with a focus on speed, traction, and pushing power, with features like wedge-shaped bodies to get under opponents or high-torque motors for strength. Some employ advanced tactics, such as using infrared sensors to avoid falling off the ring or to track the opponent's location. Sumo bot competitions combine engineering, programming, and strategic thinking.
+				</div>
+			</div>
+			<div class="segmentContent">
+				<div id="SegmentTitle">
+					My SumoBot.
+				</div>
+				<div id="SegmentImage">
+					<img src="../images/projects/SumoBot/sumobot.jpg" alt="An image of the SumoBot V1 project on a competition dohyo">
+				</div>
+				<div id="SegmentParagraph">
+					My sumobot was designed with a offensive first mindset. There is no need for defense if the bot can autonomously survey the area and stay prepared for potential attacks. Being a fully 3d printed chassis designed by myself, i focused on reducing as much material in the areas unseen, utilizing additional perforations and finding an ideal infill ratio with respects to rigidity to filament use.
+				</div>
+			</div>
+			<div class="segmentContent">
+				<div id="SegmentTitle">
+					Platform overview:
+				</div>
+				<div id="SegmentImage">
+					<img src="../images/projects/SumoBot/FAncyCodeSumo.png" alt="An image with fancy schamnsy code">
+				</div>
+				<div id="SegmentParagraph">
+					Revolving around an ESP32 being the mastermind of the operation and a more traditional Arduino UNO R3 being a slave/crude GPIO expander; this sumobot makes use of a triple sonar array scanning areas in front and behind, effectively allowing it to foresee all potential attacks. Using a custom serial interface, I developed a custom circuit to allow communication between the respective 5v logic and 3v logic seen on the R3 and ESP32.
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			window.onscroll = function() {scrollFunction()};
+			let SCRLHeaderCaptionFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('--SCRLHeaderCaptionFontSize');
+			let HeaderCaptionFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderCaptionFontSize');
+			let HeaderCaptionContentMinimize = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderCaptionContentMinimize');
+			let HeaderCaptionContentStandard = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderCaptionContentStandard');
+			let ScrollLocationTrigger = window.getComputedStyle(document.documentElement).getPropertyValue('--ScrollLocationTrigger');
+			let HeaderCaptionContentBoxWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--HeaderCaptionContentBoxWidth');
+			let SCRLHeaderCaptionContentBoxWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--SCRLHeaderCaptionContentBoxWidth');
+			function scrollFunction() {
+				if (document.body.scrollTop > ScrollLocationTrigger || document.documentElement.scrollTop > ScrollLocationTrigger) {
+					document.getElementById("HeaderCaption").style.fontSize = SCRLHeaderCaptionFontSize;
+					document.getElementById("HeaderCaptionContainer_Background").style.height = HeaderCaptionContentMinimize;
+				} else {
+					document.getElementById("HeaderCaption").style.fontSize = HeaderCaptionFontSize;
+					document.getElementById("HeaderCaptionContainer_Background").style.height = HeaderCaptionContentStandard;
+				}
+			}
+		</script>
+	<script>
+		$(document).ready( function() {
+			$("#Navigation").load("/Resources/Navigation.html");
+			$("footer").load("/Resources/Footer.html")
+		});
+	</script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+<footer></footer>
+</html>
+ 

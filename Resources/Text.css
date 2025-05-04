@@ -1,0 +1,244 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=DotGothic16&family=Monoton&family=Oswald:wght@200..700&display=swap');
+
+.oswald-regular {
+	font-family: "Oswald", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+.dotgothic16-regular {
+	font-family: "DotGothic16", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}  
+
+.coral-pixels-regular {
+	font-family: "Coral Pixels", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.monoton-regular {
+	font-family: "Monoton", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+  
+
+  /* GOOGLE FONTS */
+
+@import "colours.css";
+
+:root {
+    --FontTitle: Oswald;
+    --FontNavigation: DotGothic16;
+    --FontSegment: Oswald;
+}
+
+.btn-outline-primary:active, .btn-outline-primary:visited, .btn-outline-primary:focus, .btn-outline-primary:hover{
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.blurb {
+	width: 30%;
+	height: auto;
+	position: absolute;
+	z-index: 2;
+	background-color: var(--BackgroundColourTranslucent);
+    transform: translate(20%, 15%);
+	border-radius: 10px;
+}
+
+.blurbText {
+	font-family: var(--FontSegment);
+	font-weight: 300;
+	text-align: left;
+	text-wrap: wrap;
+	color: var(--TextColourPrimary);
+	padding: 14px 16px;
+	font-size: 18px;
+	margin: 0;
+}
+.blurbTitle {
+	font-family: var(--FontSegment);
+	font-weight: 300;
+	text-align: left;
+	color: var(--TextColourPrimary);
+	padding: 14px 16px;
+	font-size: 35px;
+	margin: 0;
+}
+.contentContainer {
+	display:flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+	background-color: var(--PageBackgroundColour);
+}
+.contentBox {
+	background-color: var(--AccentColour);
+    height: 366.5px;
+    width: 300px;
+    border-radius: 5px;
+}
+.contentBox:hover {
+	color: var(--AccentColour);
+	background-color: var(--HoverContentColour);
+	font-weight: 250;
+}
+.contentBox img{
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+	padding: 50;
+}
+.contentBoxTitle{
+	text-align: center;
+	color: var(--TextColourPrimary);
+	font-family: Oswald;
+	font-weight: 300;
+	font-size: 30px;
+	padding: 7px 8px;
+}
+.contentSegment {
+	align-items: center;
+	flex: 1;
+	padding:  16px;
+	background-color: var(--PageBackgroundColour);
+	border-radius: 5px;
+	margin: 6px;
+	min-width: 300px;
+}
+.contentSegmentText {
+	font-family: Oswald;
+	font-weight: 300;
+	color: var(--TextColourPrimary);
+	font-size: var(--SegmentParagraphFontSize);
+	text-align: center;
+	margin-left: var(--SegmentParagraphMargin);
+	margin-right: var(--SegmentParagraphMargin);
+	margin-top:var(--SegmentParagraphMarginTop);
+}
+
+#HeaderCaption {
+    font-family: Oswald;
+	font-weight: 400;
+    color: var(--TextColourSecondary);
+    font-size: var(--HeaderCaptionFontSize);
+    text-align: Left;	
+	transition: 1.2s;
+	border-radius: 0px;
+	width: var(--HeaderCaptionContentBoxWidth);
+	margin-bottom: 1vw;
+	margin-left: 1vw;
+}
+#HeaderCaptionContainer_Background {
+	position: relative;
+    width: 100%;
+    height: var(--HeaderCaptionContentStandard);
+    overflow: hidden;
+    z-index: 1;
+	transition: 1.2s;
+}
+.highlight{
+		background-color: var(--BackgroundColour_Light);
+}
+
+.pdf {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+}
+
+.promptButton{
+	font-family: Oswald;
+	font-weight: 200;
+	color: var(--TextColourPrimary) !important;
+	border-color: rgba(219,133,155,0) !important;
+	outline: none !important;
+    box-shadow: none !important;
+	border-radius: 2px !important;
+	background-color: rgba(219,133,155,0) !important;
+}
+
+.promptButton:hover{
+	color: var(--AccentColour) !important;
+}
+
+#SegmentContainer {
+	display: flex;
+	flex-wrap: nowrap;
+	padding-top: 5vw;
+}
+.segmentContent {
+	align-items: center;
+	flex: 1;
+	padding:  16px;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+	margin: 5px;
+	margin-bottom:  40px;
+	box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+}
+#SegmentImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+#SegmentImage img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+#SegmentTitle {
+    font-family: Oswald;
+	font-weight: 350;
+    color: var(--TextColourSecondary);
+    font-size: var(--SegmentTitleFontSize);
+    text-align: center;
+	margin-bottom: var(--SegmentTitleMarginBottom);
+	margin-top: var(--SegmentTitleMarginTop);
+}
+#SegmentParagraph {
+    font-family: Oswald;
+	font-weight: 300;
+    color: var(--TextColourSecondary);
+    font-size: var(--SegmentParagraphFontSize);
+    text-align: center;
+	margin-left: var(--SegmentParagraphMargin);
+	margin-right: var(--SegmentParagraphMargin);
+	margin-top:var(--SegmentParagraphMarginTop);
+}
+#SegmentParagraph a{
+		color: var(--AccentColour);
+}
+
+.Title {
+    font-family: var(--FontTitle);
+	font-weight: 500;
+    text-align: center;
+    color: var(--TextColourSecondary);
+    padding: 14px 16px;
+    font-size: 35px;
+    margin-bottom: 0rem;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(5px);
+}
+
+/* MOBILE */
+@media only screen and (max-width: 1000px) {
+	.blurb {
+		width: auto;
+		transform: translate(0%, 0%);
+		border-radius: 0px;
+	}
+	#SegmentContainer {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 5vw;
+	}
+}

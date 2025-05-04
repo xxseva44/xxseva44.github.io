@@ -1,0 +1,44 @@
+<link href="Resources/Colours.css" rel="stylesheet" >
+<link href="Resources/Text.css" rel="stylesheet" >
+
+	<style>
+	.navbar-custom {
+		background-color: var(--BackgroundColour);
+	}
+	.custom-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(219,133,155, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	}
+	.nav-item {
+		font-size: 20px;
+		font-family: var(--FontNavigation);
+		color: var(--TextColourPrimary);
+	}
+	.nav-item:hover {
+		color: var(--AccentColour);
+	}
+	.nav-itemExtra {
+		font-size: 15px;
+		font-family: var(--FontNavigation);
+		color: var(--TextColourPrimary);
+	}
+	.nav-itemExtra:hover {
+		color: var(--AccentColour);
+	}
+
+    </style>
+
+	<div id ="Navigation">
+		<nav class="navbar navbar-expand-lg navbar-custom">
+			<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="/Homepage.html">Home</a>
+					<a class="nav-item nav-link" href="/Photography.html">Photography</a>
+					<a class="nav-item nav-link" href="/Projects.html">Projects</a>
+					<a class="nav-item nav-link" href="/About_Me.html">Resume</a>
+				</div>
+			</div>
+		</nav>
+	</div>
