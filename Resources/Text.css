@@ -146,6 +146,17 @@
 		background-color: var(--BackgroundColour_Light);
 }
 
+#paragraph{
+	font-family: var(--FontSegment);
+	font-weight: 300;
+	text-align: left;
+	text-wrap: wrap;
+	color: var(--TextColourPrimary);
+	padding: 14px 16px;
+	font-size: 2vw;
+	margin: 0;
+}
+
 .pdf {
 	width: 100%;
 	aspect-ratio: 4 / 3;
@@ -225,7 +236,7 @@
     padding: 14px 16px;
     font-size: 35px;
     margin-bottom: 0rem;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.158);
 	backdrop-filter: blur(5px);
 }
 

@@ -13,28 +13,56 @@
 			background-image: url("Resources/images/photography/MRU25/MRU25-24.jpg");
 			background-attachment: fixed;
 		}
-
-		#SegmentImage img {
-			width: 20%;
+		#HomepageContentContainer{
+			display: flex;
+			flex-direction: var(--flexDirection);
+			align-items: center;
+			justify-content: center;
+			background-color: rgb(0, 0, 0);
+			padding-top: 5vw;
+			padding-bottom: 5vw;
+		}
+		#HomepageContentContainer img{
+			max-width: var(--ImageMaxWidth);
 			height: auto;
+			border-radius: 5px;
+		}
+		#AboutTitle{
+			font-family: Oswald;
+			font-weight: 400;
+			color: var(--TextColourPrimary);
+			font-size: var(--HeaderCaptionFontSize);
+			text-align: Left;	
+			transition: 1.2s;
+			border-radius: 0px;
+		}
+		#AboutParagraph{
+			font-family: var(--FontSegment);
+			font-weight: 300;
+			text-align: center;
+			text-wrap: wrap;
+			color: var(--TextColourPrimary);
+			padding: 14px 16px;
+			font-size: var(--ParagraphTextSize);
+			max-width: var(--AboutParagraphMax-Width);
+			margin: 4vw;
 		}
 		:root {
-		--SegmentTitleFontSize: 3vw;
-		--SegmentParagraphFontSize: 1.3vw;
-		--SegmentParagraphMargin: 2vw;
-		--SegmentParagraphMarginTop: 3vw;
-		--SegmentTitleMarginTop: 1vw;
-		--SegmentTitleMarginBottom: 1vw;
+		--HeaderCaptionFontSize: 5vw;
+		--HeaderCaptionContentBoxWidth: 30vw;
+		--ParagraphTextSize: 1vw;
+		--flexDirection: row;
+		--AboutParagraphMax-Width: 40vw;
+		--ImageMaxWidth: 20vw;
 	}
 	@media only screen and (max-width: 1000px) {
 		:root {
-			--SegmentTitleFontSize: 8vw;
-			--SegmentParagraphFontSize: 3.5vw;
-			--SegmentParagraphMarginLeft: 12vw;
-			--SegmentParagraphMarginRight: 12vw;
-			--SegmentParagraphMarginBottom: 5vw;
-			--SegmentTitleMarginTop: 10vw;
-			--SegmentTitleMarginBottom: 4vw;
+			--HeaderCaptionFontSize: 9vw;
+			--HeaderCaptionContentBoxWidth: 80vw;
+			--ParagraphTextSize: 3vw;
+			--flexDirection: column;
+			--AboutParagraphMax-Width: 90vw;
+			--ImageMaxWidth: 60vw;
 		}
 	}
 	</style>
@@ -50,13 +78,19 @@
 		  
 			<div class="carousel-inner">
 			  <div class="carousel-item active">
-				<img class="d-block w-100 h-50" src="Resources/images/homepage/image3.jpg" alt="Image 1">
+				<a href="/Resources/Projects_Resources/Vinyl_Holder.html">
+				<img class="d-block w-100 h-50" src="Resources/images/homepage/VinylMountsHeader2.png" alt="Image 1">
+				</a>
 			  </div>
 			  <div class="carousel-item">
+				<a href="/Resources/Projects_Resources/SUMOBOT_V1.html">
 				<img class="d-block w-100 h-50" src="Resources/images/homepage/FAncyCodeSumo.png" alt="Image 2">
+				</a>
 			  </div>
 			  <div class="carousel-item">
-				<img class="d-block w-100 h-50" src="Resources/images/homepage/VinylMounts.png" alt="Image 3">
+				<a href="/Photography.html">
+				<img class="d-block w-100 h-50" src="Resources/images/homepage/Iforgor.png" alt="Image 3">
+				</a>
 			  </div>
 			</div>
 		  
@@ -69,17 +103,28 @@
 			  <span class="sr-only">Next</span>
 			</a>
 		  </div>
-		  <div id="SegmentContainer">
-			<div class="segmentContent">
-				<div id="SegmentTitle">
-					A little about me.
-				</div>
-				<div id="SegmentImage">
-					<img src="Resources/images/about_me/me.jpg" alt="Big buff Strong brown man, GRRR">
-				</div>
-				<div id="SegmentParagraph">
-					My name is Geel Sevathean and I am a student who constantly strives for the best, no matter what. I am fun and lighthearted while also capable of taking charge and leading when the need arises. Within the classroom I am always trying to help others and act as a listener when needed, offering no judgement to my peers regardless of how dissimilar they may be. Whether it be taking photos of cars or people, designing elaborate things such as automated flower pots, smart mirrors or doing graphic design, I am very detail oriented and constantly try to maintain a disciplined work ethic - ensuring that any product of my work is of high standards and is done within a timely manner. Some of my personal interests include photography, 3D modelling, 3D printing, programming, tinkering with and designing Projects. As I move towards maximising my potential, I am beginning to push the boundaries of what is expected and try to further improve my skills where possible. Growing up, I have always been a problem solver, always trying to find solutions to any problems which may arise, regardless of the difficulty or scenario. As I continue to grow and become my own person, this has evolved into one of my defining attributes. Another defining attribute is my openness to different ideas, and my open attitude towards everything. I would say this is one of my more notable traits as while most look down upon difference, I have always embraced it. In short, I am a friendly person with the capacity of leading, driven by the idea of success with the belief of self improvement and acceptance of difference.
-				</div>
+		<div id="HomepageContentContainer">
+			<div id="AboutTitle">
+				About Me.
+			</div>
+			<div id="AboutParagraph">
+				My name is Geel Sevathean and I am a student who constantly strives for the best, no matter what. I am fun and lighthearted while also capable of taking charge and leading when the need arises. Within the classroom I am always trying to help others and act as a listener when needed, offering no judgement to my peers regardless of how dissimilar they may be. Whether it be taking photos of cars or people, designing elaborate things such as automated flower pots, smart mirrors or doing graphic design, I am very detail oriented and constantly try to maintain a disciplined work ethic - ensuring that any product of my work is of high standards and is done within a timely manner. Some of my personal interests include photography, 3D modelling, 3D printing, programming, tinkering with and designing Projects. As I move towards maximising my potential, I am beginning to push the boundaries of what is expected and try to further improve my skills where possible. Growing up, I have always been a problem solver, always trying to find solutions to any problems which may arise, regardless of the difficulty or scenario. As I continue to grow and become my own person, this has evolved into one of my defining attributes. Another defining attribute is my openness to different ideas, and my open attitude towards everything. I would say this is one of my more notable traits as while most look down upon difference, I have always embraced it. In short, I am a friendly person with the capacity of leading, driven by the idea of success with the belief of self improvement and acceptance of difference.
+			</div>
+			<img src="/Resources/images/about_me/me.jpg" alt="big brave brown man">
+		</div>
+		<div id="HomepageContentContainer">
+			<img src="/Resources/images/homepage/AboutMeSkillSetsImage.png" alt="big brave brown man">
+			<div id="AboutParagraph">
+				My skillsets include the following: <br><br>
+				<span class ="highlight", style="color:var(--TextColourSecondary)">
+				&ensp;c++ | Arduino Programming | Android Development | HTML | Java | Bash | Scripting | Python | Kotlin | CSS&ensp; <br>
+				&ensp;3D Printing | Computer Aided Design | PCB Design | Technical Drawing | Soldering | Troubleshooting&ensp; <br>
+				&ensp;Windows | Linux | PC Troubleshooting | PC Building | Audio & Video | Soundboard Control | Lighting Control&ensp; <br>
+				&ensp;Leadership | Dependability | Event Planning | Quality Control | Communication | Photography | 3D modelling&ensp;
+				</span>
+			</div>
+			<div id="AboutTitle">
+				Skill Sets.
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
