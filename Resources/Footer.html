@@ -5,6 +5,7 @@
 footer {
     font-family: Oswald;
     font-weight: 400;
+    font-size: var(--FooterFontSize);
     text-align: left;
     padding: 50px;
     background-color: var(--AccentColour);
@@ -14,6 +15,14 @@ footer {
 footer a{
     font-weight: 300;
     color: var(--TextColourSecondary);
+}
+:root {
+    --FooterFontSize: 1vw;
+}
+@media only screen and (max-width: 1000px) {
+		:root {
+            --FooterFontSize: 4vw;
+        }
 }
 </style>
 

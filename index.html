@@ -39,11 +39,11 @@
 		#AboutParagraph{
 			font-family: var(--FontSegment);
 			font-weight: 300;
+			font-size: var(--ParagraphTextSize);
 			text-align: center;
 			text-wrap: wrap;
 			color: var(--TextColourPrimary);
-			padding: 14px 16px;
-			font-size: var(--ParagraphTextSize);
+			padding: 14px 16px; 
 			max-width: var(--AboutParagraphMax-Width);
 			margin: 4vw;
 		}
@@ -54,6 +54,10 @@
 		--flexDirection: row;
 		--AboutParagraphMax-Width: 40vw;
 		--ImageMaxWidth: 20vw;
+
+		--ImageCarouselOne: url('Resources/images/homepage/VinylMountsHeader2.png');
+		--ImageCarouselTwo: url('Resources/images/homepage/FAncyCodeSumo.png');
+		--ImageCarouselThree: url('Resources/images/homepage/Iforgor.png');
 	}
 	@media only screen and (max-width: 1000px) {
 		:root {
@@ -61,8 +65,12 @@
 			--HeaderCaptionContentBoxWidth: 80vw;
 			--ParagraphTextSize: 3vw;
 			--flexDirection: column;
-			--AboutParagraphMax-Width: 90vw;
+			--AboutParagraphMax-Width: 85vw;
 			--ImageMaxWidth: 60vw;
+
+			--ImageCarouselOne: url('Resources/images/homepage/VinylMountsHeader21B1.png');
+			--ImageCarouselTwo: url('Resources/images/homepage/FAncyCodeSumo1B1.png');
+			--ImageCarouselThree: url('Resources/images/homepage/Ifrogot1B1.png');
 		}
 	}
 	</style>
@@ -79,17 +87,17 @@
 			<div class="carousel-inner">
 			  <div class="carousel-item active">
 				<a href="/Resources/Projects_Resources/Vinyl_Holder.html">
-				<img class="d-block w-100 h-50" src="Resources/images/homepage/VinylMountsHeader2.png" alt="Image 1">
+				<img id="carouselImageOne" class="d-block w-100 h-50" alt="Image 1">
 				</a>
 			  </div>
 			  <div class="carousel-item">
 				<a href="/Resources/Projects_Resources/SUMOBOT_V1.html">
-				<img class="d-block w-100 h-50" src="Resources/images/homepage/FAncyCodeSumo.png" alt="Image 2">
+				<img id="carouselImageTwo" class="d-block w-100 h-50" alt="Image 1">
 				</a>
 			  </div>
 			  <div class="carousel-item">
 				<a href="/Photography.html">
-				<img class="d-block w-100 h-50" src="Resources/images/homepage/Iforgor.png" alt="Image 3">
+				<img id="carouselImageThree" class="d-block w-100 h-50" alt="Image 1">
 				</a>
 			  </div>
 			</div>
@@ -113,19 +121,19 @@
 			<img src="/Resources/images/about_me/me.jpg" alt="big brave brown man">
 		</div>
 		<div id="HomepageContentContainer">
-			<img src="/Resources/images/homepage/AboutMeSkillSetsImage.png" alt="big brave brown man">
+			<div id="AboutTitle">
+				My Skills.
+			</div>
 			<div id="AboutParagraph">
-				My skillsets include the following: <br><br>
+				My skills include the following: <br><br>
 				<span class ="highlight", style="color:var(--TextColourSecondary)">
-				&ensp;c++ | Arduino Programming | Android Development | HTML | Java | Bash | Scripting | Python | Kotlin | CSS&ensp; <br>
-				&ensp;3D Printing | Computer Aided Design | PCB Design | Technical Drawing | Soldering | Troubleshooting&ensp; <br>
-				&ensp;Windows | Linux | PC Troubleshooting | PC Building | Audio & Video | Soundboard Control | Lighting Control&ensp; <br>
-				&ensp;Leadership | Dependability | Event Planning | Quality Control | Communication | Photography | 3D modelling&ensp;
+				c++ | Arduino Programming | Android Development | HTML | Java | Bash | Scripting | Python | Kotlin | CSS <br>
+				3D Printing | Computer Aided Design | PCB Design | Technical Drawing | Soldering | Troubleshooting <br>
+				Windows | Linux | PC Troubleshooting | PC Building | Audio & Video | Soundboard Control | Lighting Control <br>
+				Leadership | Dependability | Event Planning | Quality Control | Communication | Photography | 3D modelling
 				</span>
 			</div>
-			<div id="AboutTitle">
-				Skill Sets.
-			</div>
+			<img src="/Resources/images/homepage/AboutMeSkillSetsImage.png" alt="kool kid things">
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
@@ -133,6 +141,11 @@
 				$("#Navigation").load("Resources/Navigation.html");
 				$("footer").load("Resources/Footer.html")
 			});
+		</script>
+		<script>
+  			document.getElementById("carouselImageOne").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselOne').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+			document.getElementById("carouselImageTwo").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselTwo').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+			document.getElementById("carouselImageThree").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselThree').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
 		</script>
 	</body>
 	<footer></footer>

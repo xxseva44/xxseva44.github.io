@@ -6,12 +6,21 @@
 		background-color: var(--BackgroundColour);
 	}
 	.nav-itemExtra {
-		font-size: 15px;
+		font-size: var(--FontNavigationSizePhoto);
 		font-family: var(--FontNavigation);
 		color: var(--TextColourPrimary);
 	}
 	.nav-itemExtra:hover {
 		color: var(--AccentColour);
+	}
+	:root{
+		--FontNavigationPhoto: DotGothic16;
+		--FontNavigationSizePhoto: 1vw;
+	}
+	@media only screen and (max-width: 1000px) {
+		:root {
+			--FontNavigationSizePhoto: 4vw;
+		}
 	}
     </style>
 
