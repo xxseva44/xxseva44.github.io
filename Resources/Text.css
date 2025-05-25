@@ -174,7 +174,7 @@
 
 #SegmentContainer {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	padding-top: 5vw;
 }
 .segmentContent {
@@ -190,10 +190,7 @@
 	min-width: var(--MinWidthSegmentContent);
 }
 #SegmentImage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
+    text-align: center;
 }
 #SegmentImage img {
     max-width: 90%;
