@@ -25,13 +25,15 @@
 		--SegmentTitleMarginBottom: 1vw;
 
 		--ScrollLocationTrigger: 10;
+
+		--BackgroundImage: url('/Resources/images/projects/Vinyl_Holder/R10.png');
 	}
 	@media only screen and (max-width: 1000px) {
 		:root {
 			--HeaderCaptionFontSize: 9vw;
 			--SCRLHeaderCaptionFontSize: 6vw;
 			--HeaderCaptionContentMinimize: 10vw;
-			--HeaderCaptionContentStandard: 160vw;
+			--HeaderCaptionContentStandard: 120vw;
 			--HeaderCaptionContentBoxWidth: 80vw;
 
 			--ParagraphTextSize: 10px;
@@ -45,10 +47,12 @@
 			--SegmentTitleMarginBottom: 4vw;
 
 			--ScrollLocationTrigger: 10;
+
+			--BackgroundImage: url('/Resources/images/projects/Vinyl_Holder/R10M.png');
 		}
 	}
 	body {
-		background-image: url("../images/projects/Vinyl_Holder/R10.png");
+		background-image: var(--BackgroundImage);
 		background-attachment: fixed;
 	}
 </style>

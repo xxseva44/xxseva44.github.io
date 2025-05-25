@@ -73,9 +73,9 @@
 }
 .contentBox {
 	background-color: var(--AccentColour);
-    height: 366.5px;
-    width: 300px;
-    border-radius: 5px;
+    height: auto;
+    width: var(--ContentBoxWidth);
+    border-radius: 12px;
 }
 .contentBox:hover {
 	color: var(--AccentColour);
@@ -85,7 +85,7 @@
 .contentBox img{
 	max-width: 100%;
 	height: auto;
-	border-radius: 5px;
+	border-radius: 12px;
 	padding: 50;
 }
 .contentBoxTitle{
@@ -93,7 +93,7 @@
 	color: var(--TextColourPrimary);
 	font-family: Oswald;
 	font-weight: 300;
-	font-size: 30px;
+	font-size: 40px;
 	padding: 7px 8px;
 }
 .contentSegment {
@@ -241,6 +241,7 @@
 	--BlurbTitleFontSize: 3vw;
 	--BlurbFontSize: 1vw;
 	--PromptFontSize: 1vw;
+	--ContentBoxWidth: 20vw;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -250,6 +251,7 @@
 	--BlurbTitleFontSize: 8vw;
 	--BlurbFontSize: 3.5vw;
 	--PromptFontSize: 6vw;
+	--ContentBoxWidth: 70vw;
 	}
 
 	.blurb {
