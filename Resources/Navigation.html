@@ -7,9 +7,9 @@
 		background-color: #ffffff75;
 		z-index: 1049;
 		position: fixed;
-		top: 0;
-		left: 0;
-		width: 0;
+		top: 0vw;
+		left: 0vw;
+		width: 0vw;
 		opacity: 0;
 		height: 100vh;
 		backdrop-filter: blur(8px);
@@ -31,10 +31,10 @@
 
 	.NavMenu .CloseButton{
 		position: absolute;
-		top: 0;
-		right: 25px;
-		font-size: 36px;
-		margin-left: 50px;
+		top: var(--NavCloseButtonTop);
+		right: var(--NavCloseButtonRight);
+		font-size: var(--NavCloseButtonSize);
+		margin-left: 5vw;
 		color: var(--TextColourPrimary);
 	}
 
@@ -54,20 +54,34 @@
 	.OpenButton {
 		position: fixed;
 		z-index: 1048;
-		top: 35px;
-		left: 30px;
+		top: var(--NavOpenButtonTop);
+		left: var(--NavOpenButtonLeft);
+		font-size: var(--NavOpenButtonSize);
+		color: var(--AccentColour);
 	}
 
 	:root{
 		--FontNavigation: DotGothic16;
-		--FontNavigationSize: 1.2vw;
-		--NavigationToggleSize: 1.2vw;
+		--FontNavigationSize: 1.6vw;
+		--NavigationMenuWidth: 13vw;
+		--NavOpenButtonTop: 1.4vw;
+		--NavOpenButtonLeft: 1vw;
+		--NavOpenButtonSize: 1.2vw;
+		--NavCloseButtonTop: 0vw;
+		--NavCloseButtonRight: 1vw;
+		--NavCloseButtonSize: 1.2vw;
 	}
 
 	@media only screen and (max-width: 1000px) {
 		:root {
 			--FontNavigationSize: 6vw;
-			--NavigationToggleSize: 6vw;
+			--NavigationMenuWidth: 50vw ;
+			--NavOpenButtonTop: 3vw;
+			--NavOpenButtonLeft: 5vw;
+			--NavOpenButtonSize: 6vw;
+			--NavCloseButtonTop: 0vw;
+			--NavCloseButtonRight: 2vw;
+			--NavCloseButtonSize: 6vw;
 		}
 	}
 
@@ -90,13 +104,14 @@
 
 	<script>
 		function openNav() {
-		document.getElementById("NavBar").style.width = "250px";
+		let NavWidth = window.getComputedStyle(document.documentElement).getPropertyValue('--NavigationMenuWidth');
+		document.getElementById("NavBar").style.width = NavWidth;
 		document.getElementById("DisplayBlur").style.width = "100%";
 		document.getElementById("DisplayBlur").style.opacity = "1";
 		}
 
 		function closeNav() {
-		document.getElementById("NavBar").style.width = "0px";
+		document.getElementById("NavBar").style.width = "0vw";
 		document.getElementById("DisplayBlur").style.opacity = "0";
 		setTimeout(() => {
 			document.getElementById("DisplayBlur").style.width = "0";
