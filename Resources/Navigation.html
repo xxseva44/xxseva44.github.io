@@ -1,23 +1,61 @@
 <link href="Resources/Colours.css" rel="stylesheet" >
 <link href="Resources/Text.css" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
-	.navbar-custom {
+	#DisplayBlur{
+		background-color: #ffffff75;
+		z-index: 1049;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 0;
+		opacity: 0;
+		height: 100vh;
+		backdrop-filter: blur(8px);
+		transition: opacity 0.5s ease;
+
+	}
+	.NavMenu {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1050;
+		top: 0;
+		left: 0;
 		background-color: var(--BackgroundColour);
+		overflow-x: hidden;
+		padding-top: 60px;
+		transition: 0.5s;
 	}
-	.custom-toggler .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(219,133,155, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+	.NavMenu .CloseButton{
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+		color: var(--TextColourPrimary);
 	}
-	.navbar-toggler {
-	font-size: var(--NavigationToggleSize)
-	}
-	.nav-item {
+
+	.NavLink{
 		font-size: var(--FontNavigationSize);
 		font-family: var(--FontNavigation);
 		color: var(--TextColourPrimary);
+		display: block;
+  		transition: 0.6s;
+		padding: 8px 8px 8px 32px;
 	}
-	.nav-item:hover {
+
+	.NavLink:hover {
 		color: var(--AccentColour);
+	}
+
+	.OpenButton {
+		position: fixed;
+		z-index: 1048;
+		top: 35px;
+		left: 30px;
 	}
 
 	:root{
@@ -25,6 +63,7 @@
 		--FontNavigationSize: 1.2vw;
 		--NavigationToggleSize: 1.2vw;
 	}
+
 	@media only screen and (max-width: 1000px) {
 		:root {
 			--FontNavigationSize: 6vw;
@@ -35,17 +74,33 @@
     </style>
 
 	<div id ="Navigation">
-		<nav class="navbar navbar-expand-lg navbar-custom">
-			<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div class="navbar-nav">
-					<a class="nav-item nav-link" href="/index.html">Home</a>
-					<a class="nav-item nav-link" href="/Photography.html">Photography</a>
-					<a class="nav-item nav-link" href="/Projects.html">Projects</a>
-					<a class="nav-item nav-link" href="/About_Me.html">Resume</a>
-				</div>
+		<div class="OpenButton" type="button" onclick="openNav()">
+			<i class="fa fa-bars"></i> <!-- Temp until i design my own svg icons -->
+		</div>
+		<div id="DisplayBlur">
+			<div class="NavMenu" id="NavBar">
+						<a href="javascript:void(0)" class="CloseButton" onclick="closeNav()">&times;</a>
+						<a class="NavLink" href="/index.html">Home</a>
+						<a class="NavLink" href="/Photography.html">Photography</a>
+						<a class="NavLink" href="/Projects.html">Projects</a>
+						<a class="NavLink" href="/About_Me.html">Resume</a>
 			</div>
-		</nav>
+		</div>
 	</div>
+
+	<script>
+		function openNav() {
+		document.getElementById("NavBar").style.width = "250px";
+		document.getElementById("DisplayBlur").style.width = "100%";
+		document.getElementById("DisplayBlur").style.opacity = "1";
+		}
+
+		function closeNav() {
+		document.getElementById("NavBar").style.width = "0px";
+		document.getElementById("DisplayBlur").style.opacity = "0";
+		setTimeout(() => {
+			document.getElementById("DisplayBlur").style.width = "0";
+		}, 500);
+
+		}
+	</script>
