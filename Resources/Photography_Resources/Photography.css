@@ -1,0 +1,27 @@
+.photoGrid{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: var(--BackgroundColour);
+    object-fit: contain;
+    gap: var(--PhotoGridGap);
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+.photoGrid img{
+    max-width: var(--PhotoGridMaxWidth);
+    min-width: var(--PhotoGridMinWidth);
+    border-radius: 5px;
+}
+:root{
+    --PhotoGridMaxWidth: 30vw;
+    --PhotoGridMinWidth: 30vw;
+    --PhotoGridGap: 1vw;
+}
+@media only screen and (max-width: 1000px) {
+	:root {
+    --PhotoGridMaxWidth: 80vw;
+    --PhotoGridMinWidth: 20vw;
+    --PhotoGridGap: 4vw;
+    }
+}

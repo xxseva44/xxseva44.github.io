@@ -6,50 +6,102 @@
 		<link href="Resources/Colours.css" rel="stylesheet" >
 		<link href="Resources/Text.css" rel="stylesheet" >
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</head>
 <style>
-	.photoGrid {
-		display: flex;
-		flex-flow: row wrap
+	body{
+		background-color: var(--BackgroundColour);
 	}
-	.photoGrid img {
-		max-width: 50%;
+	#myCarousel {
+	width: 90vw;
+	max-height: 100vw;
+	border-radius: 6px;
+	overflow: hidden;
+	margin: 6vw;
+	}
+	#photoGridContainer{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 2vw;
+		justify-content: center;
+		margin-top: 5vw;
+		margin-bottom: 10vw;
+	}
+	.photoGridElement {
+		flex: 0 0 40vw;  
+		border-radius: 6px;
+	}
+	.photoGridElement img{
+		width: 100%;
 		min-width: auto;
 		height: auto;
+		border-radius: 6px;
+		object-fit: cover;
+	}
+	:root{
+		--ImageCarouselOne: url('/Resources/images/photography/CIAS25/WEB/CIAS25WEB_COVER.png');
+		--ImageCarouselTwo: url('Resources/images/photography/MTL24/WEB/MTL24WEB_COVER.png');
+		--ImageCarouselThree: url('Resources/images/photography/PUREURO/WEB/PUREUROWEB_COVER.png');
 	}
 </style>
 <body>
 <div class="Title">GEEL SEVATHEAN</div>
 <div id="Navigation"></div>
-<div id="Navigation_Photo"></div>
-<div class="contentContainer">
-    <div id="blurb" class="blurb collapse show">
-		<button class="btn btn-outline-primary promptButton" type="button" data-toggle="collapse" data-target="#blurb" aria-expanded="false" aria-controls="blurb">
-			Show/Hide
-		</button>
-        <div class ="blurbTitle">Say Hello to My Little Friend. 
-			<br>(Aka my Canon T6)</div>
-        <div class ="blurbText">
-            Beginning in middle school, I found my humble start waving around an old phone, attempting to capture the world in a lens similar to my own. After having obtained my current Canon T6 in 2017, it marked the growth of a significant skillset of mine. As the years went by, I further developed my creative eye and post-processing of images, which resulted in the artistry seen below.
-		</div>
-    </div>
-	<div class="photoGrid">
-		<img src="Resources/images/photography/image1.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image2.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image3.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image4.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image5.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image6.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image7.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image8.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image9.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image10.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image11.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image12.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image13.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image14.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image15.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
-		<img src="Resources/images/photography/image16.jpg" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+	  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	  <li data-target="#myCarousel" data-slide-to="1"></li>
+	  <li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+  
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<a href="/Resources/Photography_Resources/CIAS25.html">
+		<img id="carouselImageOne" class="d-block w-100" alt="Image 1">
+		</a>
+	  </div>
+	  <div class="carousel-item">
+		<a href="/Resources/Photography_Resources/MTL24.html">
+		<img id="carouselImageTwo" class="d-block w-100" alt="Image 1">
+		</a>
+	  </div>
+	  <div class="carousel-item">
+		<a href="/Resources/Photography_Resources/PurEuro25.html">
+		<img id="carouselImageThree" class="d-block w-100" alt="Image 1">
+		</a>
+	  </div>
+	</div>
+  
+	<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="sr-only">Next</span>
+	</a>
+</div>
+<div id="photoGridContainer">
+	<div class="photoGridElement">
+		<a href="/Resources/Photography_Resources/MTL24.html">
+			<img src="Resources/images/photography/MTL24/WEB/MTL24WEBTHUMBNAIL.png" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		</a>
+	</div>
+	<div class="photoGridElement">
+		<a href="/Resources/Photography_Resources/CIAS25.html">
+			<img src="Resources/images/photography/CIAS25/WEB/CIAS25WEBTHUMBNAIL.png" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		</a>
+	</div>
+	<div class="photoGridElement">
+		<a href="/Resources/Photography_Resources/MRU25.html">
+			<img src="Resources/images/photography/MRU25/WEB/MRU25WEBTHUMBNAIL.png" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		</a>
+	</div>
+	<div class="photoGridElement">
+		<a href="/Resources/Photography_Resources/PurEuro25.html">
+			<img src="Resources/images/photography/PUREURO/WEB/PUREUROWEBTHUMBNAIL.png" alt="Car" data-aos="fade-in" data-aos-duration="1500" data-aos-offset="40">
+		</a>
 	</div>
 </div>
 	
@@ -66,8 +118,13 @@
 	});
 </script>
 <script>
+	document.getElementById("carouselImageOne").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselOne').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+	document.getElementById("carouselImageTwo").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselTwo').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+	document.getElementById("carouselImageThree").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselThree').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+</script>
+<script>
 	AOS.init();
 </script>
-</body>
 <footer></footer>
+</body>
 </html>
