@@ -26,7 +26,7 @@
 		gap: 2vw;
 		justify-content: center;
 		margin-top: 5vw;
-		margin-bottom: 10vw;
+		margin-bottom: var(--PhotoGridContainerMarginBottom);
 	}
 	.photoGridElement {
 		flex: 0 0 40vw;  
@@ -43,6 +43,12 @@
 		--ImageCarouselOne: url('/Resources/images/photography/CIAS25/WEB/CIAS25WEB_COVER.png');
 		--ImageCarouselTwo: url('Resources/images/photography/MTL24/WEB/MTL24WEB_COVER.png');
 		--ImageCarouselThree: url('Resources/images/photography/PUREURO/WEB/PUREUROWEB_COVER.png');
+		--PhotoGridContainerMarginBottom: 10vw;
+	}
+	@media only screen and (max-width: 1000px) {
+		:root {
+            --PhotoGridContainerMarginBottom: 100vw;
+        }
 	}
 </style>
 <body>
@@ -125,6 +131,6 @@
 <script>
 	AOS.init();
 </script>
-<footer></footer>
 </body>
+<footer></footer>
 </html>
