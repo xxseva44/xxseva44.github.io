@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Misc Projects</title>
+		<link href="/Resources/Colours.css" rel="stylesheet" >
+		<link href="/Resources/Text.css" rel="stylesheet" >
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		body {
+			background-image: url("Resources/images/photography/MRU25/WEB/MRU25WEB-06.jpg");
+			background-attachment: fixed;
+		}
+		#HomepageContentContainer{
+			display: flex;
+			flex-direction: var(--flexDirection);
+			align-items: center;
+			justify-content: center;
+			background-color: rgb(0, 0, 0);
+			padding-top: var(--HomepageContentContainerPadding);
+			padding-bottom: var(--HomepageContentContainerPadding);
+		}
+		#HomepageContentContainer img{
+			max-width: var(--ImageMaxWidth);
+			height: auto;
+			border-radius: 5px;
+		}
+		#AboutTitle{
+			font-family: Oswald;
+			font-weight: 400;
+			color: var(--TextColourPrimary);
+			font-size: var(--HeaderCaptionFontSize);
+			text-align: Left;	
+			transition: 1.2s;
+			border-radius: 0px;
+		}
+		#AboutParagraph{
+			font-family: var(--FontSegment);
+			font-weight: 300;
+			font-size: var(--ParagraphTextSize);
+			text-align: center;
+			text-wrap: wrap;
+			color: var(--TextColourPrimary);
+			padding: 14px 16px; 
+			max-width: var(--AboutParagraphMax-Width);
+			margin: 4vw;
+		}
+		:root {
+        --HomepageContentContainerPadding: 4vw;
+		--HeaderCaptionFontSize: 5vw;
+		--HeaderCaptionContentBoxWidth: 30vw;
+		--ParagraphTextSize: 1vw;
+		--flexDirection: row;
+		--AboutParagraphMax-Width: 40vw;
+		--ImageMaxWidth: 20vw;
+	}
+	@media only screen and (max-width: 1000px) {
+		:root {
+            --HomepageContentContainerPadding: 12vw;
+			--HeaderCaptionFontSize: 9vw;
+			--HeaderCaptionContentBoxWidth: 80vw;
+			--ParagraphTextSize: 3.8vw;
+			--flexDirection: column;
+			--AboutParagraphMax-Width: 85vw;
+    		--ImageMaxWidth: 60vw;
+		}
+	}
+	</style>
+	<body>
+	<div class="Title">GEEL SEVATHEAN</div>
+		<div id="Navigation"></div>
+		<div id="HomepageContentContainer">
+			<div id="AboutTitle">
+				LED <br>
+                Matrix [V1]
+			</div>
+			<div id="AboutParagraph">
+				Bored out of my mind towards the end of Grade 12 - I decided to build an led matrix display, cause why not. Construction and design of the unit was simple with no significant challenges beyond hand soldering individual ws2812 LEDs that were cut from a strip. Each row was it's own strip of sorts although having each row connected to the previous would have reduced IO usage of the microcontroller, which was a typical esp32. The entire unit is powered via a usb c input. Software wise at its core, the led array was set up In a manner which exposed the LEDs with a coordinate system. The matrix supported Bluetooth connectivity and usb connectivity, allowing commands to be sent via both methods of connection. I am currently designed a new version with a higher density and adding additional hardware - turning this into a statement piece for the tabletop. I am also exploring the development of larger units that could be wall mounted. <br><br> Updates will soon be available via my blog.
+			</div>
+			<img src="/Resources/images/projects/MISC/MiscProj-Matrix.jpg" alt="big brave brown man">
+		</div>
+        <div id="HomepageContentContainer">
+            <div id="AboutTitle">
+				Simon Game
+			</div>
+			<div id="AboutParagraph">
+				Serving as an early 12th Grade assignment for my computer engineering course, we were tasked with developing what was essentially a handheld game console that would play the Simon game, in which a randomized pattern is played that you must match until you lose. For my project, I took things a step further and added a lcd display that would act as a score board - showing a live score as well as round information. Furthermore, I developed a light os and added hardware controls such as brightness and button sensitivity. The lcd brightness control was achieved by sending a PWM signal to the backlight rather than directly attaching it to the 3.3V power rail of the UNO. The PCB seen in the image was also custom made, starting off as a design made in expressPCB and turned into a tangible object using a photolithographic process. <br> <br> I am developing a new version of this handheld with further hardware capabilities and an upgraded display. Check my blog out for more info.
+			</div>
+            <img src="/Resources/images/projects/MISC/MiscProj-SimonGame.jpg" alt="big brave brown man">
+		</div>
+        <div id="HomepageContentContainer">
+			<div id="AboutTitle">
+				Name Card
+			</div>
+			<div id="AboutParagraph">
+				One long weekend I sat and looked at my segment display, wondering... What should I do? Thus the NameCard was born. A simple little device based on the arduino UNO that can display 4 character words/scroll text. Nothing insane beyond myself after ttrying to trouble shoot wires that may have popped off. The words can be swapped out by pushing the buttons - advancing or returning.
+			</div>
+			<img src="/Resources/images/projects/MISC/MiscProj-NameCard.jpg" alt="big brave brown man">
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			$(document).ready( function() {
+				$("#Navigation").load("/Resources/Navigation.html");
+				$("footer").load("/Resources/Footer.html")
+			});
+		</script>
+		<script>
+  			document.getElementById("carouselImageOne").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselOne').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+			document.getElementById("carouselImageTwo").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselTwo').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+			document.getElementById("carouselImageThree").src = getComputedStyle(document.documentElement).getPropertyValue('--ImageCarouselThree').trim().replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+		</script>
+	</body>
+	<footer></footer>
+</html> 
