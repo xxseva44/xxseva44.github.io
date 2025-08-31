@@ -1,5 +1,5 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=DotGothic16&family=Monoton&family=Oswald&family=Courier+Prime:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=DotGothic16&family=Monoton&family=Oswald:wght@200..700&family=Courier+Prime:wght@200..700&display=swap');
 
 .courier-prime-regular {
 	font-family: "Courier Prime", monospace;
@@ -77,28 +77,34 @@
     flex-wrap: wrap;
 }
 .contentBox {
-	background-color: var(--AccentColour);
     height: auto;
     width: var(--ContentBoxWidth);
     border-radius: 12px;
+	margin: 2vw;
 }
-.contentBox:hover {
+.contentBox:hover .contentBoxTitle,
+.contentBoxTitle:hover {
 	color: var(--AccentColour);
-	background-color: var(--HoverContentColour);
-	font-weight: 250;
+	background-color: var(--BackgroundColour_Light);
+	font-weight: 350;
 }
 .contentBox img{
 	max-width: 100%;
 	height: auto;
-	padding: 50;
+	border-radius: 20px 20px 0px 0px;
 }
 .contentBoxTitle{
 	text-align: center;
 	color: var(--TextColourPrimary);
+	background-color: var(--AccentColour);
 	font-family: Oswald;
-	font-weight: 300;
-	font-size: 40px;
+	font-weight: 250;
+	font-size: 35px;
 	padding: 7px 8px;
+	border-radius: 0px 0px 20px 20px;
+}
+.contentBoxTitle a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
 }
 .contentSegment {
 	align-items: center;
@@ -111,7 +117,7 @@
 }
 .contentSegmentText {
 	font-family: Oswald;
-	font-weight: 300;
+	font-weight: 400;
 	color: var(--TextColourPrimary);
 	font-size: var(--SegmentParagraphFontSize);
 	text-align: center;
@@ -282,7 +288,7 @@
 	--BlurbTitleFontSize: 8vw;
 	--BlurbFontSize: 3.5vw;
 	--PromptFontSize: 6vw;
-	--ContentBoxWidth: 70vw;
+	--ContentBoxWidth: 54vw;
 	--SingleTextHeight: 5.5vw;
 	--SingleTextMaxWidth: 40vw;
 	--SingleTextPaddingLR: 2vw;
